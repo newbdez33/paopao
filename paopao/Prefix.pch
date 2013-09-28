@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'paopao' target in the 'paopao' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+#endif

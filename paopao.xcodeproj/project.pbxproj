@@ -15,271 +15,266 @@
 		CE1B00DF17F6DBFE00E617CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B00DE17F6DBFE00E617CA /* UIKit.framework */; };
 		CE1B00E117F6DBFE00E617CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B00E017F6DBFE00E617CA /* Foundation.framework */; };
 		CE1B00E317F6DBFE00E617CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B00E217F6DBFE00E617CA /* CoreGraphics.framework */; };
-		CE1B00E717F6DBFE00E617CA /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00E617F6DBFE00E617CA /* CloseNormal.png */; };
-		CE1B00E917F6DBFE00E617CA /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00E817F6DBFE00E617CA /* CloseSelected.png */; };
-		CE1B00EB17F6DBFE00E617CA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00EA17F6DBFE00E617CA /* Default.png */; };
-		CE1B00ED17F6DBFE00E617CA /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00EC17F6DBFE00E617CA /* HelloWorld.png */; };
-		CE1B00EF17F6DBFE00E617CA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00EE17F6DBFE00E617CA /* Icon-72.png */; };
-		CE1B00F117F6DBFE00E617CA /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00F017F6DBFE00E617CA /* Icon-Small-50.png */; };
-		CE1B00F317F6DBFE00E617CA /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00F217F6DBFE00E617CA /* Icon-Small.png */; };
-		CE1B00F517F6DBFE00E617CA /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00F417F6DBFE00E617CA /* Icon-Small@2x.png */; };
-		CE1B00F717F6DBFE00E617CA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00F617F6DBFE00E617CA /* Icon.png */; };
-		CE1B00F917F6DBFE00E617CA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00F817F6DBFE00E617CA /* Icon@2x.png */; };
-		CE1B00FB17F6DBFE00E617CA /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = CE1B00FA17F6DBFE00E617CA /* iTunesArtwork */; };
-		CE1B010017F6DBFE00E617CA /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B00FF17F6DBFE00E617CA /* AppController.mm */; };
-		CE1B010317F6DBFE00E617CA /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010217F6DBFE00E617CA /* RootViewController.mm */; };
+		CE1B010017F6DBFE00E617CA /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B00FF17F6DBFE00E617CA /* AppController.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B010317F6DBFE00E617CA /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010217F6DBFE00E617CA /* RootViewController.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CE1B010517F6DBFE00E617CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010417F6DBFE00E617CA /* main.m */; };
-		CE1B010A17F6DBFE00E617CA /* CCAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010917F6DBFE00E617CA /* CCAction.cpp */; };
-		CE1B010D17F6DBFE00E617CA /* CCActionCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010C17F6DBFE00E617CA /* CCActionCamera.cpp */; };
-		CE1B011017F6DBFE00E617CA /* CCActionCatmullRom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010F17F6DBFE00E617CA /* CCActionCatmullRom.cpp */; };
-		CE1B011317F6DBFE00E617CA /* CCActionEase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011217F6DBFE00E617CA /* CCActionEase.cpp */; };
-		CE1B011617F6DBFE00E617CA /* CCActionGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011517F6DBFE00E617CA /* CCActionGrid.cpp */; };
-		CE1B011917F6DBFE00E617CA /* CCActionGrid3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011817F6DBFE00E617CA /* CCActionGrid3D.cpp */; };
-		CE1B011C17F6DBFE00E617CA /* CCActionInstant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011B17F6DBFE00E617CA /* CCActionInstant.cpp */; };
-		CE1B011F17F6DBFF00E617CA /* CCActionInterval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011E17F6DBFF00E617CA /* CCActionInterval.cpp */; };
-		CE1B012217F6DBFF00E617CA /* CCActionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012117F6DBFF00E617CA /* CCActionManager.cpp */; };
-		CE1B012517F6DBFF00E617CA /* CCActionPageTurn3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012417F6DBFF00E617CA /* CCActionPageTurn3D.cpp */; };
-		CE1B012817F6DBFF00E617CA /* CCActionProgressTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012717F6DBFF00E617CA /* CCActionProgressTimer.cpp */; };
-		CE1B012B17F6DBFF00E617CA /* CCActionTiledGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012A17F6DBFF00E617CA /* CCActionTiledGrid.cpp */; };
-		CE1B012E17F6DBFF00E617CA /* CCActionTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012D17F6DBFF00E617CA /* CCActionTween.cpp */; };
-		CE1B013217F6DBFF00E617CA /* CCAtlasNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013117F6DBFF00E617CA /* CCAtlasNode.cpp */; };
-		CE1B013517F6DBFF00E617CA /* CCNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013417F6DBFF00E617CA /* CCNode.cpp */; };
-		CE1B013817F6DBFF00E617CA /* CCCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013717F6DBFF00E617CA /* CCCamera.cpp */; };
-		CE1B013B17F6DBFF00E617CA /* CCConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013A17F6DBFF00E617CA /* CCConfiguration.cpp */; };
-		CE1B013E17F6DBFF00E617CA /* CCDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013D17F6DBFF00E617CA /* CCDirector.cpp */; };
-		CE1B014117F6DBFF00E617CA /* ccFPSImages.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014017F6DBFF00E617CA /* ccFPSImages.c */; };
-		CE1B014417F6DBFF00E617CA /* CCScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014317F6DBFF00E617CA /* CCScheduler.cpp */; };
-		CE1B014817F6DBFF00E617CA /* CCAffineTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014717F6DBFF00E617CA /* CCAffineTransform.cpp */; };
-		CE1B014B17F6DBFF00E617CA /* CCArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014A17F6DBFF00E617CA /* CCArray.cpp */; };
-		CE1B014E17F6DBFF00E617CA /* CCAutoreleasePool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014D17F6DBFF00E617CA /* CCAutoreleasePool.cpp */; };
-		CE1B015217F6DBFF00E617CA /* CCDataVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B015117F6DBFF00E617CA /* CCDataVisitor.cpp */; };
-		CE1B015517F6DBFF00E617CA /* CCDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B015417F6DBFF00E617CA /* CCDictionary.cpp */; };
-		CE1B015A17F6DBFF00E617CA /* CCGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B015917F6DBFF00E617CA /* CCGeometry.cpp */; };
-		CE1B015E17F6DBFF00E617CA /* CCNS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B015D17F6DBFF00E617CA /* CCNS.cpp */; };
-		CE1B016117F6DBFF00E617CA /* CCObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016017F6DBFF00E617CA /* CCObject.cpp */; };
-		CE1B016417F6DBFF00E617CA /* CCSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016317F6DBFF00E617CA /* CCSet.cpp */; };
-		CE1B016717F6DBFF00E617CA /* CCString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016617F6DBFF00E617CA /* CCString.cpp */; };
-		CE1B016A17F6DBFF00E617CA /* CCZone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016917F6DBFF00E617CA /* CCZone.cpp */; };
-		CE1B016D17F6DBFF00E617CA /* cocos2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016C17F6DBFF00E617CA /* cocos2d.cpp */; };
-		CE1B017017F6DBFF00E617CA /* CCDrawingPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016F17F6DBFF00E617CA /* CCDrawingPrimitives.cpp */; };
-		CE1B017317F6DBFF00E617CA /* CCDrawNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B017217F6DBFF00E617CA /* CCDrawNode.cpp */; };
-		CE1B017717F6DBFF00E617CA /* CCGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B017617F6DBFF00E617CA /* CCGrabber.cpp */; };
-		CE1B017A17F6DBFF00E617CA /* CCGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B017917F6DBFF00E617CA /* CCGrid.cpp */; };
-		CE1B019817F6DBFF00E617CA /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B019717F6DBFF00E617CA /* aabb.c */; };
+		CE1B010A17F6DBFE00E617CA /* CCAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010917F6DBFE00E617CA /* CCAction.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B010D17F6DBFE00E617CA /* CCActionCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010C17F6DBFE00E617CA /* CCActionCamera.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B011017F6DBFE00E617CA /* CCActionCatmullRom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B010F17F6DBFE00E617CA /* CCActionCatmullRom.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B011317F6DBFE00E617CA /* CCActionEase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011217F6DBFE00E617CA /* CCActionEase.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B011617F6DBFE00E617CA /* CCActionGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011517F6DBFE00E617CA /* CCActionGrid.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B011917F6DBFE00E617CA /* CCActionGrid3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011817F6DBFE00E617CA /* CCActionGrid3D.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B011C17F6DBFE00E617CA /* CCActionInstant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011B17F6DBFE00E617CA /* CCActionInstant.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B011F17F6DBFF00E617CA /* CCActionInterval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B011E17F6DBFF00E617CA /* CCActionInterval.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B012217F6DBFF00E617CA /* CCActionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012117F6DBFF00E617CA /* CCActionManager.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B012517F6DBFF00E617CA /* CCActionPageTurn3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012417F6DBFF00E617CA /* CCActionPageTurn3D.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B012817F6DBFF00E617CA /* CCActionProgressTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012717F6DBFF00E617CA /* CCActionProgressTimer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B012B17F6DBFF00E617CA /* CCActionTiledGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012A17F6DBFF00E617CA /* CCActionTiledGrid.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B012E17F6DBFF00E617CA /* CCActionTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B012D17F6DBFF00E617CA /* CCActionTween.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B013217F6DBFF00E617CA /* CCAtlasNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013117F6DBFF00E617CA /* CCAtlasNode.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B013517F6DBFF00E617CA /* CCNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013417F6DBFF00E617CA /* CCNode.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B013817F6DBFF00E617CA /* CCCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013717F6DBFF00E617CA /* CCCamera.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B013B17F6DBFF00E617CA /* CCConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013A17F6DBFF00E617CA /* CCConfiguration.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B013E17F6DBFF00E617CA /* CCDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B013D17F6DBFF00E617CA /* CCDirector.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B014117F6DBFF00E617CA /* ccFPSImages.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014017F6DBFF00E617CA /* ccFPSImages.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B014417F6DBFF00E617CA /* CCScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014317F6DBFF00E617CA /* CCScheduler.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B014817F6DBFF00E617CA /* CCAffineTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014717F6DBFF00E617CA /* CCAffineTransform.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B014B17F6DBFF00E617CA /* CCArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014A17F6DBFF00E617CA /* CCArray.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B014E17F6DBFF00E617CA /* CCAutoreleasePool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B014D17F6DBFF00E617CA /* CCAutoreleasePool.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B015217F6DBFF00E617CA /* CCDataVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B015117F6DBFF00E617CA /* CCDataVisitor.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B015517F6DBFF00E617CA /* CCDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B015417F6DBFF00E617CA /* CCDictionary.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B015A17F6DBFF00E617CA /* CCGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B015917F6DBFF00E617CA /* CCGeometry.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B015E17F6DBFF00E617CA /* CCNS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B015D17F6DBFF00E617CA /* CCNS.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B016117F6DBFF00E617CA /* CCObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016017F6DBFF00E617CA /* CCObject.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B016417F6DBFF00E617CA /* CCSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016317F6DBFF00E617CA /* CCSet.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B016717F6DBFF00E617CA /* CCString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016617F6DBFF00E617CA /* CCString.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B016A17F6DBFF00E617CA /* CCZone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016917F6DBFF00E617CA /* CCZone.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B016D17F6DBFF00E617CA /* cocos2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016C17F6DBFF00E617CA /* cocos2d.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B017017F6DBFF00E617CA /* CCDrawingPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B016F17F6DBFF00E617CA /* CCDrawingPrimitives.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B017317F6DBFF00E617CA /* CCDrawNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B017217F6DBFF00E617CA /* CCDrawNode.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B017717F6DBFF00E617CA /* CCGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B017617F6DBFF00E617CA /* CCGrabber.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B017A17F6DBFF00E617CA /* CCGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B017917F6DBFF00E617CA /* CCGrid.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B019817F6DBFF00E617CA /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B019717F6DBFF00E617CA /* aabb.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CE1B019A17F6DBFF00E617CA /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = CE1B019917F6DBFF00E617CA /* ChangeLog */; };
-		CE1B019E17F6DBFF00E617CA /* mat4stack.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B019D17F6DBFF00E617CA /* mat4stack.c */; };
-		CE1B01A017F6DBFF00E617CA /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B019F17F6DBFF00E617CA /* matrix.c */; };
-		CE1B01A217F6DBFF00E617CA /* mat3.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A117F6DBFF00E617CA /* mat3.c */; };
-		CE1B01A417F6DBFF00E617CA /* mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A317F6DBFF00E617CA /* mat4.c */; };
-		CE1B01A617F6DBFF00E617CA /* neon_matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A517F6DBFF00E617CA /* neon_matrix_impl.c */; };
-		CE1B01A817F6DBFF00E617CA /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A717F6DBFF00E617CA /* plane.c */; };
-		CE1B01AA17F6DBFF00E617CA /* quaternion.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A917F6DBFF00E617CA /* quaternion.c */; };
-		CE1B01AC17F6DBFF00E617CA /* ray2.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01AB17F6DBFF00E617CA /* ray2.c */; };
-		CE1B01AE17F6DBFF00E617CA /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01AD17F6DBFF00E617CA /* utility.c */; };
-		CE1B01B017F6DBFF00E617CA /* vec2.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01AF17F6DBFF00E617CA /* vec2.c */; };
-		CE1B01B217F6DBFF00E617CA /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01B117F6DBFF00E617CA /* vec3.c */; };
-		CE1B01B417F6DBFF00E617CA /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01B317F6DBFF00E617CA /* vec4.c */; };
-		CE1B01B717F6DBFF00E617CA /* CCKeypadDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01B617F6DBFF00E617CA /* CCKeypadDelegate.cpp */; };
-		CE1B01BA17F6DBFF00E617CA /* CCKeypadDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01B917F6DBFF00E617CA /* CCKeypadDispatcher.cpp */; };
-		CE1B01BE17F6DBFF00E617CA /* CCLabelAtlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01BD17F6DBFF00E617CA /* CCLabelAtlas.cpp */; };
-		CE1B01C117F6DC0000E617CA /* CCLabelBMFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01C017F6DC0000E617CA /* CCLabelBMFont.cpp */; };
-		CE1B01C417F6DC0000E617CA /* CCLabelTTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01C317F6DC0000E617CA /* CCLabelTTF.cpp */; };
-		CE1B01C817F6DC0000E617CA /* CCLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01C717F6DC0000E617CA /* CCLayer.cpp */; };
-		CE1B01CB17F6DC0000E617CA /* CCScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01CA17F6DC0000E617CA /* CCScene.cpp */; };
-		CE1B01CE17F6DC0000E617CA /* CCTransition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01CD17F6DC0000E617CA /* CCTransition.cpp */; };
-		CE1B01D117F6DC0000E617CA /* CCTransitionPageTurn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01D017F6DC0000E617CA /* CCTransitionPageTurn.cpp */; };
-		CE1B01D417F6DC0000E617CA /* CCTransitionProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01D317F6DC0000E617CA /* CCTransitionProgress.cpp */; };
-		CE1B01D817F6DC0000E617CA /* CCMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01D717F6DC0000E617CA /* CCMenu.cpp */; };
-		CE1B01DB17F6DC0000E617CA /* CCMenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01DA17F6DC0000E617CA /* CCMenuItem.cpp */; };
-		CE1B01DF17F6DC0000E617CA /* CCClippingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01DE17F6DC0000E617CA /* CCClippingNode.cpp */; };
-		CE1B01E217F6DC0000E617CA /* CCMotionStreak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01E117F6DC0000E617CA /* CCMotionStreak.cpp */; };
-		CE1B01E517F6DC0000E617CA /* CCProgressTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01E417F6DC0000E617CA /* CCProgressTimer.cpp */; };
-		CE1B01E817F6DC0000E617CA /* CCRenderTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01E717F6DC0000E617CA /* CCRenderTexture.cpp */; };
-		CE1B01EC17F6DC0000E617CA /* CCParticleBatchNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01EB17F6DC0000E617CA /* CCParticleBatchNode.cpp */; };
-		CE1B01EF17F6DC0000E617CA /* CCParticleExamples.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01EE17F6DC0000E617CA /* CCParticleExamples.cpp */; };
-		CE1B01F217F6DC0000E617CA /* CCParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01F117F6DC0000E617CA /* CCParticleSystem.cpp */; };
-		CE1B01F517F6DC0000E617CA /* CCParticleSystemQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01F417F6DC0000E617CA /* CCParticleSystemQuad.cpp */; };
-		CE1B01FE17F6DC0000E617CA /* CCEGLViewProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01FD17F6DC0000E617CA /* CCEGLViewProtocol.cpp */; };
-		CE1B020117F6DC0000E617CA /* CCFileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B020017F6DC0000E617CA /* CCFileUtils.cpp */; };
-		CE1B020517F6DC0000E617CA /* CCImageCommonWebp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B020417F6DC0000E617CA /* CCImageCommonWebp.cpp */; };
-		CE1B020917F6DC0000E617CA /* CCSAXParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B020817F6DC0000E617CA /* CCSAXParser.cpp */; };
-		CE1B020F17F6DC0000E617CA /* AccelerometerDelegateWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B020E17F6DC0000E617CA /* AccelerometerDelegateWrapper.mm */; };
-		CE1B021217F6DC0000E617CA /* CCAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021117F6DC0000E617CA /* CCAccelerometer.mm */; };
-		CE1B021517F6DC0000E617CA /* CCApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021417F6DC0000E617CA /* CCApplication.mm */; };
-		CE1B021717F6DC0000E617CA /* CCCommon.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021617F6DC0000E617CA /* CCCommon.mm */; };
-		CE1B021917F6DC0000E617CA /* CCDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021817F6DC0000E617CA /* CCDevice.mm */; };
-		CE1B021C17F6DC0000E617CA /* CCDirectorCaller.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021B17F6DC0000E617CA /* CCDirectorCaller.mm */; };
-		CE1B021F17F6DC0000E617CA /* CCEGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021E17F6DC0000E617CA /* CCEGLView.mm */; };
-		CE1B022217F6DC0000E617CA /* CCES2Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022117F6DC0000E617CA /* CCES2Renderer.m */; };
-		CE1B022617F6DC0000E617CA /* CCFileUtilsIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022517F6DC0000E617CA /* CCFileUtilsIOS.mm */; };
-		CE1B022917F6DC0000E617CA /* CCImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022817F6DC0000E617CA /* CCImage.mm */; };
-		CE1B022B17F6DC0000E617CA /* CCLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022A17F6DC0000E617CA /* CCLock.cpp */; };
-		CE1B023017F6DC0000E617CA /* CCThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022F17F6DC0000E617CA /* CCThread.mm */; };
-		CE1B023317F6DC0000E617CA /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B023217F6DC0000E617CA /* EAGLView.mm */; };
-		CE1B023817F6DC0000E617CA /* AccelerometerSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B023717F6DC0000E617CA /* AccelerometerSimulation.m */; };
-		CE1B023A17F6DC0000E617CA /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B023917F6DC0000E617CA /* platform.cpp */; };
+		CE1B019E17F6DBFF00E617CA /* mat4stack.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B019D17F6DBFF00E617CA /* mat4stack.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01A017F6DBFF00E617CA /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B019F17F6DBFF00E617CA /* matrix.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01A217F6DBFF00E617CA /* mat3.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A117F6DBFF00E617CA /* mat3.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01A417F6DBFF00E617CA /* mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A317F6DBFF00E617CA /* mat4.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01A617F6DBFF00E617CA /* neon_matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A517F6DBFF00E617CA /* neon_matrix_impl.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01A817F6DBFF00E617CA /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A717F6DBFF00E617CA /* plane.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01AA17F6DBFF00E617CA /* quaternion.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01A917F6DBFF00E617CA /* quaternion.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01AC17F6DBFF00E617CA /* ray2.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01AB17F6DBFF00E617CA /* ray2.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01AE17F6DBFF00E617CA /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01AD17F6DBFF00E617CA /* utility.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01B017F6DBFF00E617CA /* vec2.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01AF17F6DBFF00E617CA /* vec2.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01B217F6DBFF00E617CA /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01B117F6DBFF00E617CA /* vec3.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01B417F6DBFF00E617CA /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01B317F6DBFF00E617CA /* vec4.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01B717F6DBFF00E617CA /* CCKeypadDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01B617F6DBFF00E617CA /* CCKeypadDelegate.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01BA17F6DBFF00E617CA /* CCKeypadDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01B917F6DBFF00E617CA /* CCKeypadDispatcher.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01BE17F6DBFF00E617CA /* CCLabelAtlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01BD17F6DBFF00E617CA /* CCLabelAtlas.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01C117F6DC0000E617CA /* CCLabelBMFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01C017F6DC0000E617CA /* CCLabelBMFont.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01C417F6DC0000E617CA /* CCLabelTTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01C317F6DC0000E617CA /* CCLabelTTF.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01C817F6DC0000E617CA /* CCLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01C717F6DC0000E617CA /* CCLayer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01CB17F6DC0000E617CA /* CCScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01CA17F6DC0000E617CA /* CCScene.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01CE17F6DC0000E617CA /* CCTransition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01CD17F6DC0000E617CA /* CCTransition.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01D117F6DC0000E617CA /* CCTransitionPageTurn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01D017F6DC0000E617CA /* CCTransitionPageTurn.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01D417F6DC0000E617CA /* CCTransitionProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01D317F6DC0000E617CA /* CCTransitionProgress.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01D817F6DC0000E617CA /* CCMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01D717F6DC0000E617CA /* CCMenu.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01DB17F6DC0000E617CA /* CCMenuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01DA17F6DC0000E617CA /* CCMenuItem.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01DF17F6DC0000E617CA /* CCClippingNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01DE17F6DC0000E617CA /* CCClippingNode.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01E217F6DC0000E617CA /* CCMotionStreak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01E117F6DC0000E617CA /* CCMotionStreak.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01E517F6DC0000E617CA /* CCProgressTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01E417F6DC0000E617CA /* CCProgressTimer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01E817F6DC0000E617CA /* CCRenderTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01E717F6DC0000E617CA /* CCRenderTexture.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01EC17F6DC0000E617CA /* CCParticleBatchNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01EB17F6DC0000E617CA /* CCParticleBatchNode.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01EF17F6DC0000E617CA /* CCParticleExamples.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01EE17F6DC0000E617CA /* CCParticleExamples.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01F217F6DC0000E617CA /* CCParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01F117F6DC0000E617CA /* CCParticleSystem.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01F517F6DC0000E617CA /* CCParticleSystemQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01F417F6DC0000E617CA /* CCParticleSystemQuad.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B01FE17F6DC0000E617CA /* CCEGLViewProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B01FD17F6DC0000E617CA /* CCEGLViewProtocol.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B020117F6DC0000E617CA /* CCFileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B020017F6DC0000E617CA /* CCFileUtils.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B020517F6DC0000E617CA /* CCImageCommonWebp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B020417F6DC0000E617CA /* CCImageCommonWebp.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B020917F6DC0000E617CA /* CCSAXParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B020817F6DC0000E617CA /* CCSAXParser.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B020F17F6DC0000E617CA /* AccelerometerDelegateWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B020E17F6DC0000E617CA /* AccelerometerDelegateWrapper.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B021217F6DC0000E617CA /* CCAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021117F6DC0000E617CA /* CCAccelerometer.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B021517F6DC0000E617CA /* CCApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021417F6DC0000E617CA /* CCApplication.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B021717F6DC0000E617CA /* CCCommon.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021617F6DC0000E617CA /* CCCommon.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B021917F6DC0000E617CA /* CCDevice.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021817F6DC0000E617CA /* CCDevice.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B021C17F6DC0000E617CA /* CCDirectorCaller.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021B17F6DC0000E617CA /* CCDirectorCaller.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B021F17F6DC0000E617CA /* CCEGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B021E17F6DC0000E617CA /* CCEGLView.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B022217F6DC0000E617CA /* CCES2Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022117F6DC0000E617CA /* CCES2Renderer.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B022617F6DC0000E617CA /* CCFileUtilsIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022517F6DC0000E617CA /* CCFileUtilsIOS.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B022917F6DC0000E617CA /* CCImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022817F6DC0000E617CA /* CCImage.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B022B17F6DC0000E617CA /* CCLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022A17F6DC0000E617CA /* CCLock.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B023017F6DC0000E617CA /* CCThread.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B022F17F6DC0000E617CA /* CCThread.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B023317F6DC0000E617CA /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B023217F6DC0000E617CA /* EAGLView.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B023817F6DC0000E617CA /* AccelerometerSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B023717F6DC0000E617CA /* AccelerometerSimulation.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B023A17F6DC0000E617CA /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B023917F6DC0000E617CA /* platform.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CE1B024A17F6DC0100E617CA /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B024917F6DC0100E617CA /* libcurl.a */; };
 		CE1B024C17F6DC0100E617CA /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B024B17F6DC0100E617CA /* libwebp.a */; };
-		CE1B025317F6DC0100E617CA /* CCScriptSupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B025217F6DC0100E617CA /* CCScriptSupport.cpp */; };
-		CE1B025717F6DC0100E617CA /* CCGLProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B025617F6DC0100E617CA /* CCGLProgram.cpp */; };
-		CE1B025A17F6DC0100E617CA /* ccGLStateCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B025917F6DC0100E617CA /* ccGLStateCache.cpp */; };
-		CE1B026C17F6DC0100E617CA /* CCShaderCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B026B17F6DC0100E617CA /* CCShaderCache.cpp */; };
-		CE1B027017F6DC0100E617CA /* ccShaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B026F17F6DC0100E617CA /* ccShaders.cpp */; };
-		CE1B027417F6DC0100E617CA /* CCAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027317F6DC0100E617CA /* CCAnimation.cpp */; };
-		CE1B027717F6DC0100E617CA /* CCAnimationCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027617F6DC0100E617CA /* CCAnimationCache.cpp */; };
-		CE1B027A17F6DC0100E617CA /* CCSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027917F6DC0100E617CA /* CCSprite.cpp */; };
-		CE1B027D17F6DC0100E617CA /* CCSpriteBatchNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027C17F6DC0100E617CA /* CCSpriteBatchNode.cpp */; };
-		CE1B028017F6DC0100E617CA /* CCSpriteFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027F17F6DC0100E617CA /* CCSpriteFrame.cpp */; };
-		CE1B028317F6DC0100E617CA /* CCSpriteFrameCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028217F6DC0100E617CA /* CCSpriteFrameCache.cpp */; };
-		CE1B028717F6DC0100E617CA /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028617F6DC0100E617CA /* base64.cpp */; };
-		CE1B028A17F6DC0100E617CA /* CCNotificationCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028917F6DC0100E617CA /* CCNotificationCenter.cpp */; };
-		CE1B028D17F6DC0100E617CA /* CCPointExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028C17F6DC0100E617CA /* CCPointExtension.cpp */; };
-		CE1B029017F6DC0100E617CA /* CCProfiling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028F17F6DC0100E617CA /* CCProfiling.cpp */; };
-		CE1B029317F6DC0100E617CA /* ccUTF8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029217F6DC0100E617CA /* ccUTF8.cpp */; };
-		CE1B029617F6DC0100E617CA /* ccUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029517F6DC0100E617CA /* ccUtils.cpp */; };
-		CE1B029917F6DC0100E617CA /* CCVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029817F6DC0100E617CA /* CCVertex.cpp */; };
-		CE1B029D17F6DC0100E617CA /* CCComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029C17F6DC0100E617CA /* CCComponent.cpp */; };
-		CE1B02A017F6DC0100E617CA /* CCComponentContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029F17F6DC0100E617CA /* CCComponentContainer.cpp */; };
-		CE1B02A417F6DC0100E617CA /* ccCArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02A317F6DC0100E617CA /* ccCArray.cpp */; };
-		CE1B02AA17F6DC0100E617CA /* TGAlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02A917F6DC0100E617CA /* TGAlib.cpp */; };
-		CE1B02AE17F6DC0100E617CA /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02AD17F6DC0100E617CA /* tinyxml2.cpp */; };
-		CE1B02B117F6DC0100E617CA /* TransformUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02B017F6DC0100E617CA /* TransformUtils.cpp */; };
-		CE1B02B617F6DC0100E617CA /* CCUserDefault.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02B517F6DC0100E617CA /* CCUserDefault.mm */; };
-		CE1B02B917F6DC0100E617CA /* ioapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02B817F6DC0100E617CA /* ioapi.cpp */; };
-		CE1B02BC17F6DC0100E617CA /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02BB17F6DC0100E617CA /* unzip.cpp */; };
-		CE1B02BF17F6DC0200E617CA /* ZipUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02BE17F6DC0200E617CA /* ZipUtils.cpp */; };
-		CE1B02C417F6DC0200E617CA /* CCIMEDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02C317F6DC0200E617CA /* CCIMEDispatcher.cpp */; };
-		CE1B02C717F6DC0200E617CA /* CCTextFieldTTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02C617F6DC0200E617CA /* CCTextFieldTTF.cpp */; };
-		CE1B02CB17F6DC0200E617CA /* CCTexture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02CA17F6DC0200E617CA /* CCTexture2D.cpp */; };
-		CE1B02CE17F6DC0200E617CA /* CCTextureAtlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02CD17F6DC0200E617CA /* CCTextureAtlas.cpp */; };
-		CE1B02D117F6DC0200E617CA /* CCTextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02D017F6DC0200E617CA /* CCTextureCache.cpp */; };
-		CE1B02D417F6DC0200E617CA /* CCTextureETC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02D317F6DC0200E617CA /* CCTextureETC.cpp */; };
-		CE1B02D717F6DC0200E617CA /* CCTexturePVR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02D617F6DC0200E617CA /* CCTexturePVR.cpp */; };
-		CE1B02DB17F6DC0200E617CA /* CCParallaxNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02DA17F6DC0200E617CA /* CCParallaxNode.cpp */; };
-		CE1B02DE17F6DC0200E617CA /* CCTileMapAtlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02DD17F6DC0200E617CA /* CCTileMapAtlas.cpp */; };
-		CE1B02E117F6DC0200E617CA /* CCTMXLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02E017F6DC0200E617CA /* CCTMXLayer.cpp */; };
-		CE1B02E417F6DC0200E617CA /* CCTMXObjectGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02E317F6DC0200E617CA /* CCTMXObjectGroup.cpp */; };
-		CE1B02E717F6DC0200E617CA /* CCTMXTiledMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02E617F6DC0200E617CA /* CCTMXTiledMap.cpp */; };
-		CE1B02EA17F6DC0200E617CA /* CCTMXXMLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02E917F6DC0200E617CA /* CCTMXXMLParser.cpp */; };
-		CE1B02EE17F6DC0200E617CA /* CCTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02ED17F6DC0200E617CA /* CCTouch.cpp */; };
-		CE1B02F217F6DC0200E617CA /* CCTouchDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02F117F6DC0200E617CA /* CCTouchDispatcher.cpp */; };
-		CE1B02F517F6DC0200E617CA /* CCTouchHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02F417F6DC0200E617CA /* CCTouchHandler.cpp */; };
-		CE1B02FE17F6DC0200E617CA /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02FD17F6DC0200E617CA /* CDAudioManager.m */; };
-		CE1B030217F6DC0200E617CA /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B030117F6DC0200E617CA /* CDOpenALSupport.m */; };
-		CE1B030517F6DC0200E617CA /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B030417F6DC0200E617CA /* CocosDenshion.m */; };
-		CE1B030717F6DC0200E617CA /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B030617F6DC0200E617CA /* SimpleAudioEngine.mm */; };
-		CE1B030A17F6DC0200E617CA /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B030917F6DC0200E617CA /* SimpleAudioEngine_objc.m */; };
+		CE1B025317F6DC0100E617CA /* CCScriptSupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B025217F6DC0100E617CA /* CCScriptSupport.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B025717F6DC0100E617CA /* CCGLProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B025617F6DC0100E617CA /* CCGLProgram.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B025A17F6DC0100E617CA /* ccGLStateCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B025917F6DC0100E617CA /* ccGLStateCache.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B026C17F6DC0100E617CA /* CCShaderCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B026B17F6DC0100E617CA /* CCShaderCache.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B027017F6DC0100E617CA /* ccShaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B026F17F6DC0100E617CA /* ccShaders.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B027417F6DC0100E617CA /* CCAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027317F6DC0100E617CA /* CCAnimation.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B027717F6DC0100E617CA /* CCAnimationCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027617F6DC0100E617CA /* CCAnimationCache.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B027A17F6DC0100E617CA /* CCSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027917F6DC0100E617CA /* CCSprite.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B027D17F6DC0100E617CA /* CCSpriteBatchNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027C17F6DC0100E617CA /* CCSpriteBatchNode.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B028017F6DC0100E617CA /* CCSpriteFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B027F17F6DC0100E617CA /* CCSpriteFrame.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B028317F6DC0100E617CA /* CCSpriteFrameCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028217F6DC0100E617CA /* CCSpriteFrameCache.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B028717F6DC0100E617CA /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028617F6DC0100E617CA /* base64.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B028A17F6DC0100E617CA /* CCNotificationCenter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028917F6DC0100E617CA /* CCNotificationCenter.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B028D17F6DC0100E617CA /* CCPointExtension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028C17F6DC0100E617CA /* CCPointExtension.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B029017F6DC0100E617CA /* CCProfiling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B028F17F6DC0100E617CA /* CCProfiling.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B029317F6DC0100E617CA /* ccUTF8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029217F6DC0100E617CA /* ccUTF8.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B029617F6DC0100E617CA /* ccUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029517F6DC0100E617CA /* ccUtils.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B029917F6DC0100E617CA /* CCVertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029817F6DC0100E617CA /* CCVertex.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B029D17F6DC0100E617CA /* CCComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029C17F6DC0100E617CA /* CCComponent.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02A017F6DC0100E617CA /* CCComponentContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B029F17F6DC0100E617CA /* CCComponentContainer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02A417F6DC0100E617CA /* ccCArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02A317F6DC0100E617CA /* ccCArray.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02AA17F6DC0100E617CA /* TGAlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02A917F6DC0100E617CA /* TGAlib.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02AE17F6DC0100E617CA /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02AD17F6DC0100E617CA /* tinyxml2.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02B117F6DC0100E617CA /* TransformUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02B017F6DC0100E617CA /* TransformUtils.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02B617F6DC0100E617CA /* CCUserDefault.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02B517F6DC0100E617CA /* CCUserDefault.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02B917F6DC0100E617CA /* ioapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02B817F6DC0100E617CA /* ioapi.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02BC17F6DC0100E617CA /* unzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02BB17F6DC0100E617CA /* unzip.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02BF17F6DC0200E617CA /* ZipUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02BE17F6DC0200E617CA /* ZipUtils.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02C417F6DC0200E617CA /* CCIMEDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02C317F6DC0200E617CA /* CCIMEDispatcher.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02C717F6DC0200E617CA /* CCTextFieldTTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02C617F6DC0200E617CA /* CCTextFieldTTF.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02CB17F6DC0200E617CA /* CCTexture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02CA17F6DC0200E617CA /* CCTexture2D.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02CE17F6DC0200E617CA /* CCTextureAtlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02CD17F6DC0200E617CA /* CCTextureAtlas.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02D117F6DC0200E617CA /* CCTextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02D017F6DC0200E617CA /* CCTextureCache.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02D417F6DC0200E617CA /* CCTextureETC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02D317F6DC0200E617CA /* CCTextureETC.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02D717F6DC0200E617CA /* CCTexturePVR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02D617F6DC0200E617CA /* CCTexturePVR.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02DB17F6DC0200E617CA /* CCParallaxNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02DA17F6DC0200E617CA /* CCParallaxNode.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02DE17F6DC0200E617CA /* CCTileMapAtlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02DD17F6DC0200E617CA /* CCTileMapAtlas.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02E117F6DC0200E617CA /* CCTMXLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02E017F6DC0200E617CA /* CCTMXLayer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02E417F6DC0200E617CA /* CCTMXObjectGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02E317F6DC0200E617CA /* CCTMXObjectGroup.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02E717F6DC0200E617CA /* CCTMXTiledMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02E617F6DC0200E617CA /* CCTMXTiledMap.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02EA17F6DC0200E617CA /* CCTMXXMLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02E917F6DC0200E617CA /* CCTMXXMLParser.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02EE17F6DC0200E617CA /* CCTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02ED17F6DC0200E617CA /* CCTouch.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02F217F6DC0200E617CA /* CCTouchDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02F117F6DC0200E617CA /* CCTouchDispatcher.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02F517F6DC0200E617CA /* CCTouchHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02F417F6DC0200E617CA /* CCTouchHandler.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B02FE17F6DC0200E617CA /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B02FD17F6DC0200E617CA /* CDAudioManager.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B030217F6DC0200E617CA /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B030117F6DC0200E617CA /* CDOpenALSupport.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B030517F6DC0200E617CA /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B030417F6DC0200E617CA /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B030717F6DC0200E617CA /* SimpleAudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B030617F6DC0200E617CA /* SimpleAudioEngine.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B030A17F6DC0200E617CA /* SimpleAudioEngine_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1B030917F6DC0200E617CA /* SimpleAudioEngine_objc.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CE1B030E17F6DC0200E617CA /* project.pbxproj in Resources */ = {isa = PBXBuildFile; fileRef = CE1B030D17F6DC0200E617CA /* project.pbxproj */; };
-		CE1B031217F6DC0200E617CA /* AssetsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031117F6DC0200E617CA /* AssetsManager.cpp */; };
-		CE1B031617F6DC0200E617CA /* CCBAnimationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031517F6DC0200E617CA /* CCBAnimationManager.cpp */; };
-		CE1B031917F6DC0200E617CA /* CCBFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031817F6DC0200E617CA /* CCBFileLoader.cpp */; };
-		CE1B031C17F6DC0200E617CA /* CCBKeyframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031B17F6DC0200E617CA /* CCBKeyframe.cpp */; };
-		CE1B032017F6DC0200E617CA /* CCBReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031F17F6DC0200E617CA /* CCBReader.cpp */; };
-		CE1B032417F6DC0200E617CA /* CCBSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032317F6DC0200E617CA /* CCBSequence.cpp */; };
-		CE1B032717F6DC0200E617CA /* CCBSequenceProperty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032617F6DC0200E617CA /* CCBSequenceProperty.cpp */; };
-		CE1B032A17F6DC0200E617CA /* CCBValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032917F6DC0200E617CA /* CCBValue.cpp */; };
-		CE1B032D17F6DC0200E617CA /* CCControlButtonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032C17F6DC0200E617CA /* CCControlButtonLoader.cpp */; };
-		CE1B033017F6DC0200E617CA /* CCControlLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032F17F6DC0200E617CA /* CCControlLoader.cpp */; };
-		CE1B033317F6DC0200E617CA /* CCData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033217F6DC0200E617CA /* CCData.cpp */; };
-		CE1B033617F6DC0200E617CA /* CCLabelBMFontLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033517F6DC0200E617CA /* CCLabelBMFontLoader.cpp */; };
-		CE1B033917F6DC0200E617CA /* CCLabelTTFLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033817F6DC0200E617CA /* CCLabelTTFLoader.cpp */; };
-		CE1B033C17F6DC0200E617CA /* CCLayerColorLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033B17F6DC0200E617CA /* CCLayerColorLoader.cpp */; };
-		CE1B033F17F6DC0200E617CA /* CCLayerGradientLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033E17F6DC0200E617CA /* CCLayerGradientLoader.cpp */; };
-		CE1B034217F6DC0200E617CA /* CCLayerLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034117F6DC0200E617CA /* CCLayerLoader.cpp */; };
-		CE1B034517F6DC0200E617CA /* CCMenuItemImageLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034417F6DC0200E617CA /* CCMenuItemImageLoader.cpp */; };
-		CE1B034817F6DC0200E617CA /* CCMenuItemLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034717F6DC0200E617CA /* CCMenuItemLoader.cpp */; };
-		CE1B034C17F6DC0200E617CA /* CCNode+CCBRelativePositioning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034B17F6DC0200E617CA /* CCNode+CCBRelativePositioning.cpp */; };
-		CE1B034F17F6DC0200E617CA /* CCNodeLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034E17F6DC0200E617CA /* CCNodeLoader.cpp */; };
-		CE1B035217F6DC0200E617CA /* CCNodeLoaderLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035117F6DC0200E617CA /* CCNodeLoaderLibrary.cpp */; };
-		CE1B035617F6DC0300E617CA /* CCParticleSystemQuadLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035517F6DC0300E617CA /* CCParticleSystemQuadLoader.cpp */; };
-		CE1B035917F6DC0300E617CA /* CCScale9SpriteLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035817F6DC0300E617CA /* CCScale9SpriteLoader.cpp */; };
-		CE1B035C17F6DC0300E617CA /* CCScrollViewLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035B17F6DC0300E617CA /* CCScrollViewLoader.cpp */; };
-		CE1B035F17F6DC0300E617CA /* CCSpriteLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035E17F6DC0300E617CA /* CCSpriteLoader.cpp */; };
-		CE1B036417F6DC0300E617CA /* CCComAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B036317F6DC0300E617CA /* CCComAttribute.cpp */; };
-		CE1B036717F6DC0300E617CA /* CCComAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B036617F6DC0300E617CA /* CCComAudio.cpp */; };
-		CE1B036A17F6DC0300E617CA /* CCComController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B036917F6DC0300E617CA /* CCComController.cpp */; };
-		CE1B036D17F6DC0300E617CA /* CCInputDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B036C17F6DC0300E617CA /* CCInputDelegate.cpp */; };
-		CE1B037317F6DC0300E617CA /* CCControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037217F6DC0300E617CA /* CCControl.cpp */; };
-		CE1B037617F6DC0300E617CA /* CCControlButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037517F6DC0300E617CA /* CCControlButton.cpp */; };
-		CE1B037917F6DC0300E617CA /* CCControlColourPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037817F6DC0300E617CA /* CCControlColourPicker.cpp */; };
-		CE1B037D17F6DC0300E617CA /* CCControlHuePicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037C17F6DC0300E617CA /* CCControlHuePicker.cpp */; };
-		CE1B038017F6DC0300E617CA /* CCControlPotentiometer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037F17F6DC0300E617CA /* CCControlPotentiometer.cpp */; };
-		CE1B038317F6DC0300E617CA /* CCControlSaturationBrightnessPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038217F6DC0300E617CA /* CCControlSaturationBrightnessPicker.cpp */; };
-		CE1B038617F6DC0300E617CA /* CCControlSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038517F6DC0300E617CA /* CCControlSlider.cpp */; };
-		CE1B038917F6DC0300E617CA /* CCControlStepper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038817F6DC0300E617CA /* CCControlStepper.cpp */; };
-		CE1B038C17F6DC0300E617CA /* CCControlSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038B17F6DC0300E617CA /* CCControlSwitch.cpp */; };
-		CE1B038F17F6DC0300E617CA /* CCControlUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038E17F6DC0300E617CA /* CCControlUtils.cpp */; };
-		CE1B039217F6DC0300E617CA /* CCInvocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B039117F6DC0300E617CA /* CCInvocation.cpp */; };
-		CE1B039517F6DC0300E617CA /* CCScale9Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B039417F6DC0300E617CA /* CCScale9Sprite.cpp */; };
-		CE1B039917F6DC0300E617CA /* CCEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B039817F6DC0300E617CA /* CCEditBox.cpp */; };
-		CE1B039E17F6DC0300E617CA /* CCEditBoxImplIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B039D17F6DC0300E617CA /* CCEditBoxImplIOS.mm */; };
-		CE1B03A117F6DC0300E617CA /* CCEditBoxImplMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03A017F6DC0300E617CA /* CCEditBoxImplMac.mm */; };
-		CE1B03A317F6DC0300E617CA /* CCEditBoxImplNone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03A217F6DC0300E617CA /* CCEditBoxImplNone.cpp */; };
-		CE1B03A517F6DC0300E617CA /* CCEditBoxImplTizen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03A417F6DC0300E617CA /* CCEditBoxImplTizen.cpp */; };
-		CE1B03A817F6DC0300E617CA /* CCEditBoxImplWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03A717F6DC0300E617CA /* CCEditBoxImplWin.cpp */; };
-		CE1B03AC17F6DC0300E617CA /* CCScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03AB17F6DC0300E617CA /* CCScrollView.cpp */; };
-		CE1B03AF17F6DC0300E617CA /* CCSorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03AE17F6DC0300E617CA /* CCSorting.cpp */; };
-		CE1B03B217F6DC0300E617CA /* CCTableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03B117F6DC0300E617CA /* CCTableView.cpp */; };
-		CE1B03B517F6DC0300E617CA /* CCTableViewCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03B417F6DC0300E617CA /* CCTableViewCell.cpp */; };
-		CE1B03B917F6DC0300E617CA /* LocalStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03B817F6DC0300E617CA /* LocalStorage.cpp */; };
-		CE1B03BC17F6DC0300E617CA /* LocalStorageAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03BB17F6DC0300E617CA /* LocalStorageAndroid.cpp */; };
-		CE1B03BF17F6DC0300E617CA /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03BE17F6DC0300E617CA /* HttpClient.cpp */; };
-		CE1B03C417F6DC0300E617CA /* WebSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03C317F6DC0300E617CA /* WebSocket.cpp */; };
-		CE1B03C817F6DC0300E617CA /* CCPhysicsDebugNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03C717F6DC0300E617CA /* CCPhysicsDebugNode.cpp */; };
-		CE1B03CB17F6DC0300E617CA /* CCPhysicsSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03CA17F6DC0300E617CA /* CCPhysicsSprite.cpp */; };
-		CE1B03CF17F6DC0300E617CA /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03CE17F6DC0300E617CA /* Animation.cpp */; };
-		CE1B03D217F6DC0300E617CA /* AnimationState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03D117F6DC0300E617CA /* AnimationState.cpp */; };
-		CE1B03D517F6DC0300E617CA /* AnimationStateData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03D417F6DC0300E617CA /* AnimationStateData.cpp */; };
-		CE1B03D817F6DC0300E617CA /* Atlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03D717F6DC0300E617CA /* Atlas.cpp */; };
-		CE1B03DB17F6DC0300E617CA /* AtlasAttachmentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03DA17F6DC0300E617CA /* AtlasAttachmentLoader.cpp */; };
-		CE1B03DE17F6DC0300E617CA /* Attachment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03DD17F6DC0300E617CA /* Attachment.cpp */; };
-		CE1B03E117F6DC0300E617CA /* AttachmentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03E017F6DC0300E617CA /* AttachmentLoader.cpp */; };
-		CE1B03E417F6DC0300E617CA /* Bone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03E317F6DC0300E617CA /* Bone.cpp */; };
-		CE1B03E717F6DC0300E617CA /* BoneData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03E617F6DC0300E617CA /* BoneData.cpp */; };
-		CE1B03EA17F6DC0300E617CA /* CCSkeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03E917F6DC0300E617CA /* CCSkeleton.cpp */; };
-		CE1B03ED17F6DC0300E617CA /* CCSkeletonAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03EC17F6DC0300E617CA /* CCSkeletonAnimation.cpp */; };
-		CE1B03F017F6DC0300E617CA /* extension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03EF17F6DC0300E617CA /* extension.cpp */; };
-		CE1B03F317F6DC0300E617CA /* Json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03F217F6DC0300E617CA /* Json.cpp */; };
-		CE1B03F617F6DC0300E617CA /* RegionAttachment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03F517F6DC0300E617CA /* RegionAttachment.cpp */; };
-		CE1B03F917F6DC0400E617CA /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03F817F6DC0400E617CA /* Skeleton.cpp */; };
-		CE1B03FC17F6DC0400E617CA /* SkeletonData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03FB17F6DC0400E617CA /* SkeletonData.cpp */; };
-		CE1B03FF17F6DC0400E617CA /* SkeletonJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03FE17F6DC0400E617CA /* SkeletonJson.cpp */; };
-		CE1B040217F6DC0400E617CA /* Skin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B040117F6DC0400E617CA /* Skin.cpp */; };
-		CE1B040517F6DC0400E617CA /* Slot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B040417F6DC0400E617CA /* Slot.cpp */; };
-		CE1B040817F6DC0400E617CA /* SlotData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B040717F6DC0400E617CA /* SlotData.cpp */; };
-		CE1B040B17F6DC0400E617CA /* spine-cocos2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B040A17F6DC0400E617CA /* spine-cocos2dx.cpp */; };
-		CE1B043017F6DC0400E617CA /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B042F17F6DC0400E617CA /* chipmunk.c */; };
-		CE1B043417F6DC0400E617CA /* cpConstraint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043317F6DC0400E617CA /* cpConstraint.c */; };
-		CE1B043617F6DC0400E617CA /* cpDampedRotarySpring.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043517F6DC0400E617CA /* cpDampedRotarySpring.c */; };
-		CE1B043817F6DC0400E617CA /* cpDampedSpring.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043717F6DC0400E617CA /* cpDampedSpring.c */; };
-		CE1B043A17F6DC0400E617CA /* cpGearJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043917F6DC0400E617CA /* cpGearJoint.c */; };
-		CE1B043C17F6DC0400E617CA /* cpGrooveJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043B17F6DC0400E617CA /* cpGrooveJoint.c */; };
-		CE1B043E17F6DC0400E617CA /* cpPinJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043D17F6DC0400E617CA /* cpPinJoint.c */; };
-		CE1B044017F6DC0400E617CA /* cpPivotJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043F17F6DC0400E617CA /* cpPivotJoint.c */; };
-		CE1B044217F6DC0400E617CA /* cpRatchetJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044117F6DC0400E617CA /* cpRatchetJoint.c */; };
-		CE1B044417F6DC0400E617CA /* cpRotaryLimitJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044317F6DC0400E617CA /* cpRotaryLimitJoint.c */; };
-		CE1B044617F6DC0400E617CA /* cpSimpleMotor.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044517F6DC0400E617CA /* cpSimpleMotor.c */; };
-		CE1B044817F6DC0400E617CA /* cpSlideJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044717F6DC0400E617CA /* cpSlideJoint.c */; };
-		CE1B044A17F6DC0400E617CA /* cpArbiter.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044917F6DC0400E617CA /* cpArbiter.c */; };
-		CE1B044C17F6DC0400E617CA /* cpArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044B17F6DC0400E617CA /* cpArray.c */; };
-		CE1B044E17F6DC0400E617CA /* cpBB.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044D17F6DC0400E617CA /* cpBB.c */; };
-		CE1B045017F6DC0400E617CA /* cpBBTree.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044F17F6DC0400E617CA /* cpBBTree.c */; };
-		CE1B045217F6DC0400E617CA /* cpBody.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045117F6DC0400E617CA /* cpBody.c */; };
-		CE1B045417F6DC0400E617CA /* cpCollision.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045317F6DC0400E617CA /* cpCollision.c */; };
-		CE1B045617F6DC0400E617CA /* cpHashSet.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045517F6DC0400E617CA /* cpHashSet.c */; };
-		CE1B045817F6DC0400E617CA /* cpPolyShape.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045717F6DC0400E617CA /* cpPolyShape.c */; };
-		CE1B045A17F6DC0400E617CA /* cpShape.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045917F6DC0400E617CA /* cpShape.c */; };
-		CE1B045C17F6DC0400E617CA /* cpSpace.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045B17F6DC0400E617CA /* cpSpace.c */; };
-		CE1B045E17F6DC0400E617CA /* cpSpaceComponent.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045D17F6DC0400E617CA /* cpSpaceComponent.c */; };
-		CE1B046017F6DC0400E617CA /* cpSpaceHash.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045F17F6DC0400E617CA /* cpSpaceHash.c */; };
-		CE1B046217F6DC0400E617CA /* cpSpaceQuery.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046117F6DC0400E617CA /* cpSpaceQuery.c */; };
-		CE1B046417F6DC0400E617CA /* cpSpaceStep.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046317F6DC0400E617CA /* cpSpaceStep.c */; };
-		CE1B046617F6DC0400E617CA /* cpSpatialIndex.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046517F6DC0400E617CA /* cpSpatialIndex.c */; };
-		CE1B046817F6DC0400E617CA /* cpSweep1D.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046717F6DC0400E617CA /* cpSweep1D.c */; };
-		CE1B046A17F6DC0400E617CA /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046917F6DC0400E617CA /* cpVect.c */; };
-		CE1B047217F6DC0400E617CA /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B047117F6DC0400E617CA /* libwebsockets.a */; };
+		CE1B031217F6DC0200E617CA /* AssetsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031117F6DC0200E617CA /* AssetsManager.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B031617F6DC0200E617CA /* CCBAnimationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031517F6DC0200E617CA /* CCBAnimationManager.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B031917F6DC0200E617CA /* CCBFileLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031817F6DC0200E617CA /* CCBFileLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B031C17F6DC0200E617CA /* CCBKeyframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031B17F6DC0200E617CA /* CCBKeyframe.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B032017F6DC0200E617CA /* CCBReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B031F17F6DC0200E617CA /* CCBReader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B032417F6DC0200E617CA /* CCBSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032317F6DC0200E617CA /* CCBSequence.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B032717F6DC0200E617CA /* CCBSequenceProperty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032617F6DC0200E617CA /* CCBSequenceProperty.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B032A17F6DC0200E617CA /* CCBValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032917F6DC0200E617CA /* CCBValue.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B032D17F6DC0200E617CA /* CCControlButtonLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032C17F6DC0200E617CA /* CCControlButtonLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B033017F6DC0200E617CA /* CCControlLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B032F17F6DC0200E617CA /* CCControlLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B033317F6DC0200E617CA /* CCData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033217F6DC0200E617CA /* CCData.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B033617F6DC0200E617CA /* CCLabelBMFontLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033517F6DC0200E617CA /* CCLabelBMFontLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B033917F6DC0200E617CA /* CCLabelTTFLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033817F6DC0200E617CA /* CCLabelTTFLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B033C17F6DC0200E617CA /* CCLayerColorLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033B17F6DC0200E617CA /* CCLayerColorLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B033F17F6DC0200E617CA /* CCLayerGradientLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B033E17F6DC0200E617CA /* CCLayerGradientLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B034217F6DC0200E617CA /* CCLayerLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034117F6DC0200E617CA /* CCLayerLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B034517F6DC0200E617CA /* CCMenuItemImageLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034417F6DC0200E617CA /* CCMenuItemImageLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B034817F6DC0200E617CA /* CCMenuItemLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034717F6DC0200E617CA /* CCMenuItemLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B034C17F6DC0200E617CA /* CCNode+CCBRelativePositioning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034B17F6DC0200E617CA /* CCNode+CCBRelativePositioning.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B034F17F6DC0200E617CA /* CCNodeLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B034E17F6DC0200E617CA /* CCNodeLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B035217F6DC0200E617CA /* CCNodeLoaderLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035117F6DC0200E617CA /* CCNodeLoaderLibrary.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B035617F6DC0300E617CA /* CCParticleSystemQuadLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035517F6DC0300E617CA /* CCParticleSystemQuadLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B035917F6DC0300E617CA /* CCScale9SpriteLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035817F6DC0300E617CA /* CCScale9SpriteLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B035C17F6DC0300E617CA /* CCScrollViewLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035B17F6DC0300E617CA /* CCScrollViewLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B035F17F6DC0300E617CA /* CCSpriteLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B035E17F6DC0300E617CA /* CCSpriteLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B036417F6DC0300E617CA /* CCComAttribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B036317F6DC0300E617CA /* CCComAttribute.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B036717F6DC0300E617CA /* CCComAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B036617F6DC0300E617CA /* CCComAudio.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B036A17F6DC0300E617CA /* CCComController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B036917F6DC0300E617CA /* CCComController.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B036D17F6DC0300E617CA /* CCInputDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B036C17F6DC0300E617CA /* CCInputDelegate.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B037317F6DC0300E617CA /* CCControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037217F6DC0300E617CA /* CCControl.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B037617F6DC0300E617CA /* CCControlButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037517F6DC0300E617CA /* CCControlButton.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B037917F6DC0300E617CA /* CCControlColourPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037817F6DC0300E617CA /* CCControlColourPicker.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B037D17F6DC0300E617CA /* CCControlHuePicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037C17F6DC0300E617CA /* CCControlHuePicker.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B038017F6DC0300E617CA /* CCControlPotentiometer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B037F17F6DC0300E617CA /* CCControlPotentiometer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B038317F6DC0300E617CA /* CCControlSaturationBrightnessPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038217F6DC0300E617CA /* CCControlSaturationBrightnessPicker.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B038617F6DC0300E617CA /* CCControlSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038517F6DC0300E617CA /* CCControlSlider.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B038917F6DC0300E617CA /* CCControlStepper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038817F6DC0300E617CA /* CCControlStepper.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B038C17F6DC0300E617CA /* CCControlSwitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038B17F6DC0300E617CA /* CCControlSwitch.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B038F17F6DC0300E617CA /* CCControlUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B038E17F6DC0300E617CA /* CCControlUtils.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B039217F6DC0300E617CA /* CCInvocation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B039117F6DC0300E617CA /* CCInvocation.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B039517F6DC0300E617CA /* CCScale9Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B039417F6DC0300E617CA /* CCScale9Sprite.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B039917F6DC0300E617CA /* CCEditBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B039817F6DC0300E617CA /* CCEditBox.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B039E17F6DC0300E617CA /* CCEditBoxImplIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B039D17F6DC0300E617CA /* CCEditBoxImplIOS.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03A117F6DC0300E617CA /* CCEditBoxImplMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03A017F6DC0300E617CA /* CCEditBoxImplMac.mm */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03A317F6DC0300E617CA /* CCEditBoxImplNone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03A217F6DC0300E617CA /* CCEditBoxImplNone.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03A517F6DC0300E617CA /* CCEditBoxImplTizen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03A417F6DC0300E617CA /* CCEditBoxImplTizen.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03A817F6DC0300E617CA /* CCEditBoxImplWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03A717F6DC0300E617CA /* CCEditBoxImplWin.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03AC17F6DC0300E617CA /* CCScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03AB17F6DC0300E617CA /* CCScrollView.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03AF17F6DC0300E617CA /* CCSorting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03AE17F6DC0300E617CA /* CCSorting.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03B217F6DC0300E617CA /* CCTableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03B117F6DC0300E617CA /* CCTableView.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03B517F6DC0300E617CA /* CCTableViewCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03B417F6DC0300E617CA /* CCTableViewCell.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03B917F6DC0300E617CA /* LocalStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03B817F6DC0300E617CA /* LocalStorage.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03BC17F6DC0300E617CA /* LocalStorageAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03BB17F6DC0300E617CA /* LocalStorageAndroid.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03BF17F6DC0300E617CA /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03BE17F6DC0300E617CA /* HttpClient.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03C417F6DC0300E617CA /* WebSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03C317F6DC0300E617CA /* WebSocket.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03C817F6DC0300E617CA /* CCPhysicsDebugNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03C717F6DC0300E617CA /* CCPhysicsDebugNode.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03CB17F6DC0300E617CA /* CCPhysicsSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03CA17F6DC0300E617CA /* CCPhysicsSprite.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03CF17F6DC0300E617CA /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03CE17F6DC0300E617CA /* Animation.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03D217F6DC0300E617CA /* AnimationState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03D117F6DC0300E617CA /* AnimationState.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03D517F6DC0300E617CA /* AnimationStateData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03D417F6DC0300E617CA /* AnimationStateData.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03D817F6DC0300E617CA /* Atlas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03D717F6DC0300E617CA /* Atlas.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03DB17F6DC0300E617CA /* AtlasAttachmentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03DA17F6DC0300E617CA /* AtlasAttachmentLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03DE17F6DC0300E617CA /* Attachment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03DD17F6DC0300E617CA /* Attachment.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03E117F6DC0300E617CA /* AttachmentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03E017F6DC0300E617CA /* AttachmentLoader.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03E417F6DC0300E617CA /* Bone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03E317F6DC0300E617CA /* Bone.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03E717F6DC0300E617CA /* BoneData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03E617F6DC0300E617CA /* BoneData.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03EA17F6DC0300E617CA /* CCSkeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03E917F6DC0300E617CA /* CCSkeleton.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03ED17F6DC0300E617CA /* CCSkeletonAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03EC17F6DC0300E617CA /* CCSkeletonAnimation.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03F017F6DC0300E617CA /* extension.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03EF17F6DC0300E617CA /* extension.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03F317F6DC0300E617CA /* Json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03F217F6DC0300E617CA /* Json.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03F617F6DC0300E617CA /* RegionAttachment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03F517F6DC0300E617CA /* RegionAttachment.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03F917F6DC0400E617CA /* Skeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03F817F6DC0400E617CA /* Skeleton.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03FC17F6DC0400E617CA /* SkeletonData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03FB17F6DC0400E617CA /* SkeletonData.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B03FF17F6DC0400E617CA /* SkeletonJson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B03FE17F6DC0400E617CA /* SkeletonJson.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B040217F6DC0400E617CA /* Skin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B040117F6DC0400E617CA /* Skin.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B040517F6DC0400E617CA /* Slot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B040417F6DC0400E617CA /* Slot.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B040817F6DC0400E617CA /* SlotData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B040717F6DC0400E617CA /* SlotData.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B040B17F6DC0400E617CA /* spine-cocos2dx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B040A17F6DC0400E617CA /* spine-cocos2dx.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B043017F6DC0400E617CA /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B042F17F6DC0400E617CA /* chipmunk.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B043417F6DC0400E617CA /* cpConstraint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043317F6DC0400E617CA /* cpConstraint.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B043617F6DC0400E617CA /* cpDampedRotarySpring.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043517F6DC0400E617CA /* cpDampedRotarySpring.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B043817F6DC0400E617CA /* cpDampedSpring.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043717F6DC0400E617CA /* cpDampedSpring.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B043A17F6DC0400E617CA /* cpGearJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043917F6DC0400E617CA /* cpGearJoint.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B043C17F6DC0400E617CA /* cpGrooveJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043B17F6DC0400E617CA /* cpGrooveJoint.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B043E17F6DC0400E617CA /* cpPinJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043D17F6DC0400E617CA /* cpPinJoint.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B044017F6DC0400E617CA /* cpPivotJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B043F17F6DC0400E617CA /* cpPivotJoint.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B044217F6DC0400E617CA /* cpRatchetJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044117F6DC0400E617CA /* cpRatchetJoint.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B044417F6DC0400E617CA /* cpRotaryLimitJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044317F6DC0400E617CA /* cpRotaryLimitJoint.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B044617F6DC0400E617CA /* cpSimpleMotor.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044517F6DC0400E617CA /* cpSimpleMotor.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B044817F6DC0400E617CA /* cpSlideJoint.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044717F6DC0400E617CA /* cpSlideJoint.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B044A17F6DC0400E617CA /* cpArbiter.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044917F6DC0400E617CA /* cpArbiter.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B044C17F6DC0400E617CA /* cpArray.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044B17F6DC0400E617CA /* cpArray.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B044E17F6DC0400E617CA /* cpBB.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044D17F6DC0400E617CA /* cpBB.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B045017F6DC0400E617CA /* cpBBTree.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B044F17F6DC0400E617CA /* cpBBTree.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B045217F6DC0400E617CA /* cpBody.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045117F6DC0400E617CA /* cpBody.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B045417F6DC0400E617CA /* cpCollision.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045317F6DC0400E617CA /* cpCollision.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B045617F6DC0400E617CA /* cpHashSet.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045517F6DC0400E617CA /* cpHashSet.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B045817F6DC0400E617CA /* cpPolyShape.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045717F6DC0400E617CA /* cpPolyShape.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B045A17F6DC0400E617CA /* cpShape.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045917F6DC0400E617CA /* cpShape.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B045C17F6DC0400E617CA /* cpSpace.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045B17F6DC0400E617CA /* cpSpace.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B045E17F6DC0400E617CA /* cpSpaceComponent.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045D17F6DC0400E617CA /* cpSpaceComponent.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B046017F6DC0400E617CA /* cpSpaceHash.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B045F17F6DC0400E617CA /* cpSpaceHash.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B046217F6DC0400E617CA /* cpSpaceQuery.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046117F6DC0400E617CA /* cpSpaceQuery.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B046417F6DC0400E617CA /* cpSpaceStep.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046317F6DC0400E617CA /* cpSpaceStep.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B046617F6DC0400E617CA /* cpSpatialIndex.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046517F6DC0400E617CA /* cpSpatialIndex.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B046817F6DC0400E617CA /* cpSweep1D.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046717F6DC0400E617CA /* cpSweep1D.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		CE1B046A17F6DC0400E617CA /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046917F6DC0400E617CA /* cpVect.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CE1B047817F6DC0400E617CA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B047717F6DC0400E617CA /* AppDelegate.cpp */; };
-		CE1B047B17F6DC0400E617CA /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B047A17F6DC0400E617CA /* HelloWorldScene.cpp */; };
+		CE1B047B17F6DC0400E617CA /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B047A17F6DC0400E617CA /* GameScene.cpp */; };
+		CEE19FDE17F9329F0083D768 /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B047117F6DC0400E617CA /* libwebsockets.a */; };
+		CEE19FE317F9342B0083D768 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FE217F9342B0083D768 /* icon120.png */; };
+		CEE19FE617F9345C0083D768 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FE417F9345C0083D768 /* icon57.png */; };
+		CEE19FE717F9345C0083D768 /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FE517F9345C0083D768 /* icon114.png */; };
+		CEE19FE917F935680083D768 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FE817F935680083D768 /* Default-568h@2x.png */; };
+		CEE19FEB17F9376E0083D768 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FEA17F9376E0083D768 /* Default.png */; };
+		CEE19FED17F937A50083D768 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FEC17F937A50083D768 /* Default~iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -292,17 +287,6 @@
 		CE1B00DE17F6DBFE00E617CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE1B00E017F6DBFE00E617CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE1B00E217F6DBFE00E617CA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CE1B00E617F6DBFE00E617CA /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CloseNormal.png; path = Resources/CloseNormal.png; sourceTree = "<group>"; };
-		CE1B00E817F6DBFE00E617CA /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CloseSelected.png; path = Resources/CloseSelected.png; sourceTree = "<group>"; };
-		CE1B00EA17F6DBFE00E617CA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
-		CE1B00EC17F6DBFE00E617CA /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HelloWorld.png; path = Resources/HelloWorld.png; sourceTree = "<group>"; };
-		CE1B00EE17F6DBFE00E617CA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
-		CE1B00F017F6DBFE00E617CA /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
-		CE1B00F217F6DBFE00E617CA /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icon-Small.png"; sourceTree = "<group>"; };
-		CE1B00F417F6DBFE00E617CA /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		CE1B00F617F6DBFE00E617CA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
-		CE1B00F817F6DBFE00E617CA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
-		CE1B00FA17F6DBFE00E617CA /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		CE1B00FC17F6DBFE00E617CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		CE1B00FE17F6DBFE00E617CA /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = "<group>"; };
 		CE1B00FF17F6DBFE00E617CA /* AppController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ios/AppController.mm; sourceTree = "<group>"; };
@@ -871,8 +855,14 @@
 		CE1B047417F6DC0400E617CA /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		CE1B047617F6DC0400E617CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		CE1B047717F6DC0400E617CA /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
-		CE1B047917F6DC0400E617CA /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		CE1B047A17F6DC0400E617CA /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		CE1B047917F6DC0400E617CA /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
+		CE1B047A17F6DC0400E617CA /* GameScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
+		CEE19FE217F9342B0083D768 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
+		CEE19FE417F9345C0083D768 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
+		CEE19FE517F9345C0083D768 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
+		CEE19FE817F935680083D768 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		CEE19FEA17F9376E0083D768 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		CEE19FEC17F937A50083D768 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~iphone.png"; path = "Resources/Default~iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -880,8 +870,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE19FDE17F9329F0083D768 /* libwebsockets.a in Frameworks */,
 				CE1B00D917F6DBFE00E617CA /* OpenAL.framework in Frameworks */,
-				CE1B047217F6DC0400E617CA /* libwebsockets.a in Frameworks */,
 				CE1B024C17F6DC0100E617CA /* libwebp.a in Frameworks */,
 				CE1B00DF17F6DBFE00E617CA /* UIKit.framework in Frameworks */,
 				CE1B024A17F6DC0100E617CA /* libcurl.a in Frameworks */,
@@ -944,17 +934,10 @@
 		CE1B00E517F6DBFE00E617CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CE1B00E617F6DBFE00E617CA /* CloseNormal.png */,
-				CE1B00E817F6DBFE00E617CA /* CloseSelected.png */,
-				CE1B00EA17F6DBFE00E617CA /* Default.png */,
-				CE1B00EC17F6DBFE00E617CA /* HelloWorld.png */,
-				CE1B00EE17F6DBFE00E617CA /* Icon-72.png */,
-				CE1B00F017F6DBFE00E617CA /* Icon-Small-50.png */,
-				CE1B00F217F6DBFE00E617CA /* Icon-Small.png */,
-				CE1B00F417F6DBFE00E617CA /* Icon-Small@2x.png */,
-				CE1B00F617F6DBFE00E617CA /* Icon.png */,
-				CE1B00F817F6DBFE00E617CA /* Icon@2x.png */,
-				CE1B00FA17F6DBFE00E617CA /* iTunesArtwork */,
+				CEE19FEC17F937A50083D768 /* Default~iphone.png */,
+				CEE19FEA17F9376E0083D768 /* Default.png */,
+				CEE19FE817F935680083D768 /* Default-568h@2x.png */,
+				CEE19FE117F9342B0083D768 /* icons */,
 				CE1B00FC17F6DBFE00E617CA /* Info.plist */,
 			);
 			name = Resources;
@@ -2095,10 +2078,21 @@
 			children = (
 				CE1B047617F6DC0400E617CA /* AppDelegate.h */,
 				CE1B047717F6DC0400E617CA /* AppDelegate.cpp */,
-				CE1B047917F6DC0400E617CA /* HelloWorldScene.h */,
-				CE1B047A17F6DC0400E617CA /* HelloWorldScene.cpp */,
+				CE1B047917F6DC0400E617CA /* GameScene.h */,
+				CE1B047A17F6DC0400E617CA /* GameScene.cpp */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		CEE19FE117F9342B0083D768 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				CEE19FE417F9345C0083D768 /* icon57.png */,
+				CEE19FE517F9345C0083D768 /* icon114.png */,
+				CEE19FE217F9342B0083D768 /* icon120.png */,
+			);
+			name = icons;
+			path = Resources/icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2151,19 +2145,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1B00F717F6DBFE00E617CA /* Icon.png in Resources */,
 				CE1B019A17F6DBFF00E617CA /* ChangeLog in Resources */,
-				CE1B00E717F6DBFE00E617CA /* CloseNormal.png in Resources */,
-				CE1B00F317F6DBFE00E617CA /* Icon-Small.png in Resources */,
-				CE1B00EF17F6DBFE00E617CA /* Icon-72.png in Resources */,
-				CE1B00ED17F6DBFE00E617CA /* HelloWorld.png in Resources */,
-				CE1B00F117F6DBFE00E617CA /* Icon-Small-50.png in Resources */,
-				CE1B00FB17F6DBFE00E617CA /* iTunesArtwork in Resources */,
-				CE1B00F517F6DBFE00E617CA /* Icon-Small@2x.png in Resources */,
-				CE1B00EB17F6DBFE00E617CA /* Default.png in Resources */,
-				CE1B00E917F6DBFE00E617CA /* CloseSelected.png in Resources */,
-				CE1B00F917F6DBFE00E617CA /* Icon@2x.png in Resources */,
+				CEE19FED17F937A50083D768 /* Default~iphone.png in Resources */,
 				CE1B030E17F6DC0200E617CA /* project.pbxproj in Resources */,
+				CEE19FE617F9345C0083D768 /* icon57.png in Resources */,
+				CEE19FE317F9342B0083D768 /* icon120.png in Resources */,
+				CEE19FE717F9345C0083D768 /* icon114.png in Resources */,
+				CEE19FE917F935680083D768 /* Default-568h@2x.png in Resources */,
+				CEE19FEB17F9376E0083D768 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2398,7 +2387,7 @@
 				CE1B022917F6DC0000E617CA /* CCImage.mm in Sources */,
 				CE1B044217F6DC0400E617CA /* cpRatchetJoint.c in Sources */,
 				CE1B044017F6DC0400E617CA /* cpPivotJoint.c in Sources */,
-				CE1B047B17F6DC0400E617CA /* HelloWorldScene.cpp in Sources */,
+				CE1B047B17F6DC0400E617CA /* GameScene.cpp in Sources */,
 				CE1B027717F6DC0100E617CA /* CCAnimationCache.cpp in Sources */,
 				CE1B043417F6DC0400E617CA /* cpConstraint.c in Sources */,
 				CE1B01E217F6DC0000E617CA /* CCMotionStreak.cpp in Sources */,
@@ -2501,6 +2490,7 @@
 				GCC_PREFIX_HEADER = paopao/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = paopao/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/cocos2dx/platform/third_party/ios/libraries,
@@ -2510,7 +2500,6 @@
 					"-lxml2",
 					"-lz",
 					"-lsqlite3",
-					"-websockets",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"paopao/libs/Chipmunk/include/chipmunk\"";
@@ -2527,6 +2516,7 @@
 				GCC_PREFIX_HEADER = paopao/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = paopao/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/cocos2dx/platform/third_party/ios/libraries,
@@ -2536,7 +2526,6 @@
 					"-lxml2",
 					"-lz",
 					"-lsqlite3",
-					"-websockets",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"paopao/libs/Chipmunk/include/chipmunk\"";
@@ -2564,6 +2553,7 @@
 				CE1B048017F6DC0400E617CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

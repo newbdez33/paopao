@@ -12,6 +12,7 @@
 #define PP_BOX_ROWS         7
 #define PP_KIND_COUNT       7
 #define PP_SIZE             42.0f
+#define PP_MOVE_UNIT_TIME   0.2f
 
 //ENUMS z-order
 enum {

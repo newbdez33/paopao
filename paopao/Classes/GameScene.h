@@ -19,17 +19,28 @@ class GameScene : public cocos2d::CCLayer
     PaopaoSprite *_selected;
     PaopaoSprite *_invalid;
     
+    //用于泡泡交换
+    PaopaoSprite *_exchanged1;
+    PaopaoSprite *_exchanged2;
+    
     bool _running;
     CCSize _screenSize;
     
     void createGameScreen();
     void resetGame();
     
-    //检查并将消除的泡泡打标记
-    void markAnyMatched();
+    CC_SYNTHESIZE(bool, _userInteractEnabled, UserInteractEnabled);
+    
+    //检查并将消除的泡泡打标记，如果有消除返回true
+    bool markAnyMatched();
     //检查是否还存在进一步消除的可能
     bool hasCandidate();
+    //根据xy得到泡泡
     PaopaoSprite *paopaoByXY(int x, int y);
+    //交换
+    void exchange(PaopaoSprite *selected1, PaopaoSprite *selected2, SEL_CallFuncND sel);
+    void afterExchange(CCNode *sender, PaopaoSprite *paopao);
+    void revertExchange(CCNode *sender, PaopaoSprite *paopao);
     
 public:
     GameScene();

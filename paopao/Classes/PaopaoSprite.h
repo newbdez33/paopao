@@ -32,9 +32,12 @@ public:
     void initPaopao();
     
     CCPoint positionOnScreen(int offsetX, int offsetY);
+    bool isNextTo(PaopaoSprite *other);
     
     //选中动画开关
     void glow(bool flag);
+    
+    void exchangedWith(PaopaoSprite *other);
 };
 
 #endif /* defined(__paopao__PaopaoSprite__) */

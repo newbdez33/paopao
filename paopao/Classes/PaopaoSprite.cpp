@@ -65,6 +65,12 @@ PaopaoSprite::~PaopaoSprite(void) {
     CC_SAFE_RELEASE(_glowAction);
 }
 
+bool PaopaoSprite::isNextTo(PaopaoSprite *other) {
+    return
+	(x == other->x && abs(y - other->y)==1)||
+	(y == other->y && abs(x - other->x)==1);
+}
+
 void PaopaoSprite::glow(bool flag) {
 
     _glow->stopAllActions();
@@ -77,4 +83,23 @@ void PaopaoSprite::glow(bool flag) {
     _glow->setVisible(true);
     _glow->runAction(_glowAction);
     
+}
+
+void PaopaoSprite::exchangedWith(PaopaoSprite *other) {
+    
+    int tmpX = other->x;
+    int tmpY = other->y;
+    //int tmpKind = other->kindValue;
+    
+    other->x = this->x;
+    other->y = this->y;
+    //other->kindValue = this->kindValue;
+    //CCString *name = CCString::createWithFormat("%d0.png", other->kindValue);
+    //other->setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(name->getCString()));
+    
+    this->x = tmpX;
+    this->y = tmpY;
+    //this->kindValue = tmpKind;
+    //name = CCString::createWithFormat("%d0.png", this->kindValue);
+    //this->setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(name->getCString()));
 }

@@ -62,7 +62,7 @@ bool GameScene::init()
     
     this->setTouchEnabled( true );
     this->scheduleUpdate();
-    
+    this->setUserInteractEnabled(true);
     
     return true;
 }
@@ -88,7 +88,7 @@ void GameScene::resetGame() {
     _columns->removeAllObjects();
     
     //从左上角开始填充
-    for (int y=PP_BOX_COLUMNS-1; y>=0; y--) {
+    for (int y=0; y<PP_BOX_COLUMNS; y++) {
         CCArray *row = CCArray::createWithCapacity(PP_BOX_ROWS);
         for (int x=0; x<PP_BOX_ROWS; x++) {
             int kind = (arc4random()%PP_KIND_COUNT+1);
@@ -110,8 +110,9 @@ void GameScene::resetGame() {
     }
 }
 
-void GameScene::markAnyMatched() {
+bool GameScene::markAnyMatched() {
     //TODO
+    return false;
 }
 
 bool GameScene::hasCandidate() {
@@ -123,10 +124,63 @@ PaopaoSprite *GameScene::paopaoByXY(int x, int y) {
     if (x < 0 || x >= PP_BOX_COLUMNS || y < 0 || y >= PP_BOX_ROWS)
 		return _invalid;
     
-    y = abs(PP_BOX_ROWS - y -1);    //因为是从左上角开始铺的，所以。。。
-    
     return (PaopaoSprite* )((CCArray*)_columns->objectAtIndex(y))->objectAtIndex(x);
 }
+
+void GameScene::exchange(PaopaoSprite *selected1, PaopaoSprite *selected2, SEL_CallFuncND sel) {
+    
+    selected1->glow(false);
+    selected2->glow(false);
+    
+    CCFiniteTimeAction* move1 = CCSequence::create(CCMoveTo::create(PP_MOVE_UNIT_TIME, selected2->positionOnScreen(_boxOffsetX, _boxOffsetY)),
+                                                     CCCallFuncND::create(this, sel, selected1),
+                                                     NULL);
+    CCFiniteTimeAction* move2 = CCSequence::create(CCMoveTo::create(PP_MOVE_UNIT_TIME, selected1->positionOnScreen(_boxOffsetX, _boxOffsetY)),
+                                                     CCCallFuncND::create(this, sel, selected2),
+                                                     NULL);
+    
+    CCLog("开始动画交换");
+    selected1->runAction(move1);
+    selected2->runAction(move2);
+    CCLog("开始业务交换");
+    
+    //然后在数组中也换位置
+    CCArray *row = (CCArray *)_columns->objectAtIndex( selected1->y );
+    row->replaceObjectAtIndex(selected1->x, selected2);
+    row = (CCArray *)_columns->objectAtIndex( selected2->y );
+    row->replaceObjectAtIndex(selected2->x, selected1);
+    
+    //交换一下泡泡的xy
+    selected1->exchangedWith(selected2);
+    
+}
+
+void GameScene::afterExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
+    if (_exchanged1==NULL) {
+        _exchanged1 = paopao;
+        CCLog("第一个交换动画完成");
+    }
+    
+    if (this->markAnyMatched()) {
+        CCLog("交换成功");
+        this->setUserInteractEnabled(true);
+    }else {
+        CCLog("非法交换，REVERT");
+        this->setUserInteractEnabled(true); //临时测试
+        //this->exchange(paopao, _exchanged1, callfuncND_selector(GameScene::revertExchange));
+    }
+    
+}
+
+void GameScene::revertExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
+    if (_exchanged1==NULL) {
+        _exchanged1 = paopao;
+        return;
+    }
+    _exchanged1 = NULL;
+    this->setUserInteractEnabled(true);
+}
+
 
 #pragma mark - Cocos2d Events
 void GameScene::update(float dt) {
@@ -134,6 +188,11 @@ void GameScene::update(float dt) {
 }
 
 void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
+    
+    if (!this->getUserInteractEnabled()) {
+        CCLog("动画中，不允许操作");
+        return;
+    }
     
     CCTouch *touch = (CCTouch *)pTouches->anyObject();
     if (!touch) return;
@@ -151,11 +210,17 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
         return;
     }
 
-    if (_selected) {
+    CCLog("getting x:%d, y:%d", x, y);
+    PaopaoSprite *pp = this->paopaoByXY(x, y);
+    CCLog("got kind:%d, x:%d, y:%d", pp->kindValue, pp->x, pp->y);
+    if (_selected && _selected->isNextTo(pp)) {
+        
+        this->setUserInteractEnabled(false);
         //选中了第二个泡泡
+        this->exchange(_selected, pp, callfuncND_selector(GameScene::afterExchange));
+        _selected = NULL;
     }else {
         //第一个泡泡被选中
-        PaopaoSprite *pp = this->paopaoByXY(x, y);
         CCLog("ppx:%f, ppy:%f", pp->getPosition().x, pp->getPosition().y);
         pp->glow(true);
         _selected = pp;

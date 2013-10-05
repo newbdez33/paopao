@@ -73,7 +73,9 @@ bool PaopaoSprite::isNextTo(PaopaoSprite *other) {
 
 void PaopaoSprite::glow(bool flag) {
 
-    _glow->stopAllActions();
+    if (_glow) {
+        _glow->stopAllActions();
+    }
     
     if (!flag) {
         _glow->setVisible(false);

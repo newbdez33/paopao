@@ -21,7 +21,6 @@ class GameScene : public cocos2d::CCLayer
     
     //用于泡泡交换
     PaopaoSprite *_exchanged1;
-    PaopaoSprite *_exchanged2;
     
     bool _running;
     CCSize _screenSize;

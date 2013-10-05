@@ -159,6 +159,7 @@ void GameScene::afterExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
     if (_exchanged1==NULL) {
         _exchanged1 = paopao;
         CCLog("第一个交换动画完成");
+        return;
     }
     
     if (this->markAnyMatched()) {
@@ -166,10 +167,10 @@ void GameScene::afterExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
         this->setUserInteractEnabled(true);
     }else {
         CCLog("非法交换，REVERT");
-        this->setUserInteractEnabled(true); //临时测试
-        //this->exchange(paopao, _exchanged1, callfuncND_selector(GameScene::revertExchange));
+        //this->setUserInteractEnabled(true); //临时测试
+        this->exchange(paopao, _exchanged1, callfuncND_selector(GameScene::revertExchange));
     }
-    
+    _exchanged1 = NULL;
 }
 
 void GameScene::revertExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {

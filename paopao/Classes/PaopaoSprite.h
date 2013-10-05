@@ -15,11 +15,12 @@ using namespace cocos2d;
 
 class PaopaoSprite : public CCSprite {
     
-    int _kindValue;
+public:
+    
+    int kindValue;
     int x;
     int y;
     
-public:
     ~PaopaoSprite(void);
     PaopaoSprite(int ax, int ay, int akind);
 

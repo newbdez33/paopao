@@ -25,9 +25,6 @@ GameScene::GameScene() {
     _gameBatchNode = CCSpriteBatchNode::create("paopaos.png", 49);
     this->addChild(_gameBatchNode, kMiddleground);
     
-    setTouchEnabled( true );
-    scheduleUpdate();
-    
     _running = false;
     _screenSize = CCDirector::sharedDirector()->getWinSize();
     
@@ -59,6 +56,9 @@ bool GameScene::init()
     
     resetGame();
     
+    this->setTouchEnabled( true );
+    this->scheduleUpdate();
+    
     
     return true;
 }
@@ -77,6 +77,8 @@ void GameScene::createGameScreen() {
 
 void GameScene::resetGame() {
     
+    _selected = NULL;
+    
     //1. 清空现在的box, 重新填充
     _columns->removeAllObjects();
     
@@ -94,8 +96,22 @@ void GameScene::resetGame() {
         _columns->addObject(row);
     }
     
-    //检查是否已经存在3个以上的，并调查
+    //检查是否已经存在3个以上的，并调整
+    this->markAnyMatched();
+    
     //检查是否可以继续游戏，如果不行，再次reset game
+    if (!this->hasCandidate()) {
+        this->resetGame();
+    }
+}
+
+void GameScene::markAnyMatched() {
+    //TODO
+}
+
+bool GameScene::hasCandidate() {
+    //TODO
+    return true;
 }
 
 void GameScene::update(float dt) {
@@ -103,8 +119,24 @@ void GameScene::update(float dt) {
 }
 
 void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
+
+    CCTouch *touch = (CCTouch *)pTouches->anyObject();
+    if (!touch) return;
+
+    CCPoint location = touch->getLocationInView();
+    location = CCDirector::sharedDirector()->convertToGL( location );
+    //CCLog("touched x:%f, y:%f",  location.x, location.y);
+    
+    int x = (location.x - _boxOffsetX) / PP_SIZE;
+	int y = (location.y - _boxOffsetY) / PP_SIZE;
+    
+    CCLog("touched x:%d, y:%d",  x, y);
+    
+    if (_selected && _selected->x==x && _selected->y==y) {
+        //
+    }
 }
 
 void GameScene::onEnterTransitionDidFinish() {
-    CCLog("初次动画结束进入");
+    CCLog("onEnterTransitionDidFinish进入");
 }

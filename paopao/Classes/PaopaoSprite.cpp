@@ -12,7 +12,7 @@ using namespace cocos2d;
 
 PaopaoSprite::PaopaoSprite(int ax, int ay, int akind) {
     
-    _kindValue = akind;
+    kindValue = akind;
     x = ax;
     y = ay;
 }
@@ -30,7 +30,7 @@ PaopaoSprite * PaopaoSprite::create(int ax, int ay, int akind) {
 
 void PaopaoSprite::initPaopao() {
     
-    CCString *name = CCString::createWithFormat("%d0.png", _kindValue);
+    CCString *name = CCString::createWithFormat("%d0.png", kindValue);
     this->initWithSpriteFrameName(name->getCString());
 }
 

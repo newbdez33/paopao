@@ -17,6 +17,7 @@ class GameScene : public cocos2d::CCLayer
     float _boxOffsetY;
     
     PaopaoSprite *_selected;
+    PaopaoSprite *_invalid;
     
     bool _running;
     CCSize _screenSize;
@@ -28,6 +29,7 @@ class GameScene : public cocos2d::CCLayer
     void markAnyMatched();
     //检查是否还存在进一步消除的可能
     bool hasCandidate();
+    PaopaoSprite *paopaoByXY(int x, int y);
     
 public:
     GameScene();

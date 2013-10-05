@@ -14,6 +14,10 @@
 using namespace cocos2d;
 
 class PaopaoSprite : public CCSprite {
+private:
+    
+    CCSprite *_glow;
+    CCAction *_glowAction;
     
 public:
     
@@ -28,6 +32,9 @@ public:
     void initPaopao();
     
     CCPoint positionOnScreen(int offsetX, int offsetY);
+    
+    //选中动画开关
+    void glow(bool flag);
 };
 
 #endif /* defined(__paopao__PaopaoSprite__) */

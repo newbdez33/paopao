@@ -30,8 +30,29 @@ PaopaoSprite * PaopaoSprite::create(int ax, int ay, int akind) {
 
 void PaopaoSprite::initPaopao() {
     
+    if (kindValue==-1) {
+        //invalid paopao
+        return;
+    }
+    
     CCString *name = CCString::createWithFormat("%d0.png", kindValue);
     this->initWithSpriteFrameName(name->getCString());
+    
+    //选中效果
+    _glow = CCSprite::createWithSpriteFrameName("glow.png");
+    _glow->setPosition(ccp(this->boundingBox().size.width/2, this->boundingBox().size.height/2));
+    _glow->setVisible(false);
+    this->addChild(_glow);
+
+    //glow action
+    CCFiniteTimeAction* sequence = CCSequence::create(
+                                                      CCScaleTo::create(0.2, 0.95),
+                                                      CCScaleTo::create(0.2, 0.9),
+                                                      NULL
+                                                      );
+    _glowAction = CCRepeatForever::create((CCActionInterval*)sequence);
+    _glowAction->retain();
+    
 }
 
 CCPoint PaopaoSprite::positionOnScreen(int offsetX, int offsetY) {
@@ -40,4 +61,20 @@ CCPoint PaopaoSprite::positionOnScreen(int offsetX, int offsetY) {
     return pos;
 }
 
-PaopaoSprite::~PaopaoSprite(void) {}
+PaopaoSprite::~PaopaoSprite(void) {
+    CC_SAFE_RELEASE(_glowAction);
+}
+
+void PaopaoSprite::glow(bool flag) {
+
+    _glow->stopAllActions();
+    
+    if (!flag) {
+        _glow->setVisible(false);
+        return;
+    }
+    
+    _glow->setVisible(true);
+    _glow->runAction(_glowAction);
+    
+}

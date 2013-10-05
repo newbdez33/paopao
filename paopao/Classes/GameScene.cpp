@@ -35,11 +35,15 @@ GameScene::GameScene() {
     //被消除的泡泡
     _tobeRemoved = CCArray::createWithCapacity(PP_BOX_ROWS);    //capacity无所谓，变化的
     _tobeRemoved->retain();
+    
+    _invalid = PaopaoSprite::create(-1, -1, -1);
+    _invalid->retain();
 }
 
 GameScene::~GameScene() {
     CC_SAFE_RELEASE(_columns);
     CC_SAFE_RELEASE(_tobeRemoved);
+    CC_SAFE_RELEASE(_invalid);
 }
 
 // on "init" you need to initialize your instance
@@ -63,6 +67,7 @@ bool GameScene::init()
     return true;
 }
 
+#pragma mark - Game functions
 void GameScene::createGameScreen() {
     
     //背景框
@@ -114,15 +119,25 @@ bool GameScene::hasCandidate() {
     return true;
 }
 
+PaopaoSprite *GameScene::paopaoByXY(int x, int y) {
+    if (x < 0 || x >= PP_BOX_COLUMNS || y < 0 || y >= PP_BOX_ROWS)
+		return _invalid;
+    
+    y = abs(PP_BOX_ROWS - y -1);    //因为是从左上角开始铺的，所以。。。
+    
+    return (PaopaoSprite* )((CCArray*)_columns->objectAtIndex(y))->objectAtIndex(x);
+}
+
+#pragma mark - Cocos2d Events
 void GameScene::update(float dt) {
     
 }
 
 void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
-
+    
     CCTouch *touch = (CCTouch *)pTouches->anyObject();
     if (!touch) return;
-
+    
     CCPoint location = touch->getLocationInView();
     location = CCDirector::sharedDirector()->convertToGL( location );
     //CCLog("touched x:%f, y:%f",  location.x, location.y);
@@ -133,7 +148,17 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
     CCLog("touched x:%d, y:%d",  x, y);
     
     if (_selected && _selected->x==x && _selected->y==y) {
-        //
+        return;
+    }
+
+    if (_selected) {
+        //选中了第二个泡泡
+    }else {
+        //第一个泡泡被选中
+        PaopaoSprite *pp = this->paopaoByXY(x, y);
+        CCLog("ppx:%f, ppy:%f", pp->getPosition().x, pp->getPosition().y);
+        pp->glow(true);
+        _selected = pp;
     }
 }
 

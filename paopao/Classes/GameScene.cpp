@@ -92,6 +92,7 @@ void GameScene::resetGame() {
     
     //1. 清空现在的box, 重新填充
     _columns->removeAllObjects();
+    _gameBatchNode->removeAllChildren();
 
     //从左下角开始填充
     for (int y=0; y<PP_BOX_COLUMNS; y++) {
@@ -108,7 +109,10 @@ void GameScene::resetGame() {
     }
     
     //检查是否已经存在3个以上的，并调整
-    //this->markAnyMatched();
+    if(this->markAnyMatched()) {
+        CCLog("调整");
+        this->resetGame();
+    }
     
     //检查是否可以继续游戏，如果不行，再次reset game
     if (!this->hasCandidate()) {
@@ -289,8 +293,221 @@ void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
 }
 
 bool GameScene::hasCandidate() {
-    //TODO
-    return true;
+    
+    for (int y=0; y<PP_BOX_ROWS; y++)
+    {
+		for (int x=0; x<PP_BOX_COLUMNS; x++)
+        {
+            PaopaoSprite* aTile = this->paopaoByXY(x, y);   //当前tile
+			//v 1 2
+            /*
+             向下相邻的情况
+             X
+             O  //y
+             O
+             */
+			if (aTile->y-1 >= 0) {  //如果当前tile不在最底部
+                PaopaoSprite* bTile = this->paopaoByXY(x, y-1);    //得到纵向的向下一个相邻tile
+				if (aTile->kindValue == bTile->kindValue) {         //如果纵向花色一样，
+					{
+                        PaopaoSprite* cTile = this->paopaoByXY(x, y+2);    //得到纵向的向上两个相邻tile
+						if (cTile->kindValue == aTile->kindValue)   //如果花色一样，则说明对调y+2到y+1就可以消除，返回true，可以消除
+							return true;
+					}
+					{
+                        PaopaoSprite* cTile = this->paopaoByXY(x-1, y+1);  //左一
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        PaopaoSprite* cTile = this->paopaoByXY(x+1, y+1);  //右一
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+                    
+                    //开始 当前tile肯定是和下面一个相同，这就说明当前下2肯定不相同（不然就消除了）。那就再往下找3个，看是否相同
+					{
+                        PaopaoSprite* cTile = this->paopaoByXY(x,y-3);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        PaopaoSprite* cTile = this->paopaoByXY(x-1, y-2);  //或者下2的左右是否有相同
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        PaopaoSprite* cTile = this->paopaoByXY(x+1, y-2);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+                    //结束
+                }
+			}
+            
+            //上面处理的是当前tile下面相邻。
+            
+            //下面是找向下两个，即
+            /*
+             O  //y
+             X
+             O
+             */
+            //的情况
+			//v 1 3
+			if (aTile->y-2 >= 0) {
+				PaopaoSprite *bTile = this->paopaoByXY(x, y-2);
+				if (aTile->kindValue == bTile->kindValue)
+                {
+					{
+                        /*
+                         O      //y+1
+                         O      //y
+                         X
+                         O
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x, y+1);    //覆盖了第一组逻辑中缺少的向上相邻判断
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         O      //y
+                         X
+                         O
+                         O      //y-3
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x,y-3);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         O        //y
+                         O X        //x-1, y-1
+                         O
+                         O
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x-1, y-1);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         O      //y
+                         X O    //y-1, x+1
+                         O
+                         O
+                         */
+                        
+                        PaopaoSprite* cTile = this->paopaoByXY(x+1, y-1);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+				}
+			}
+            
+			// h 1 2
+			if (aTile->x+1 < PP_BOX_COLUMNS) {
+                PaopaoSprite* bTile = this->paopaoByXY(x+1, y);
+                //右相邻组判断
+				if (aTile->kindValue == bTile->kindValue) {
+					{
+                        /*
+                         O X O O    //x-2, x, x+1
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x-2, y);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         X O O    //x, x+1
+                         O        //x-1 & y-1
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x-1, y-1);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         O        //x-1 & y+1
+                         X O O    //x, x+1
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x-1, y+1);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         X O O X O    //x, x+1, x+3
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x+3, y);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         X O O X    //x, x+1
+                         O    //x+2 & y-1
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x+2, y-1);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         O    //x+2 & y+1
+                         X O O X    //x, x+1
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x+2, y+1);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+				}
+			}
+            
+			//h 1 3
+			if (aTile->x+2 >= PP_BOX_COLUMNS) {
+                PaopaoSprite* bTile = this->paopaoByXY(x+2, y);
+                //右间邻组  X O X O   //x, x+2
+				if (aTile->kindValue == bTile->kindValue)
+                {
+					{
+                        //X O X O O   //x, x+2, x+3
+                        PaopaoSprite* cTile = this->paopaoByXY(x+3, y);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        //O O X O   //x-1, x, x+2
+                        PaopaoSprite* cTile = this->paopaoByXY(x-1, y);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         O     //x+1 & y-1
+                         O X O   //x, x+2
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x+1, y-1);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+					{
+                        /*
+                         O X O //x, x+2
+                         O   //x+1 & y+1
+                         */
+                        PaopaoSprite* cTile = this->paopaoByXY(x+1, y+1);
+						if (cTile->kindValue == aTile->kindValue)
+							return true;
+					}
+				}
+			}
+		}
+	}
+	return false;
 }
 
 PaopaoSprite *GameScene::paopaoByXY(int x, int y) {

@@ -25,6 +25,8 @@ public:
     int x;
     int y;
     
+    CC_SYNTHESIZE(bool, isRemoved, IsRemoved);
+    
     ~PaopaoSprite(void);
     PaopaoSprite(int ax, int ay, int akind);
 

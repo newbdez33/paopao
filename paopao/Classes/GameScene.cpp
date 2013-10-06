@@ -33,16 +33,22 @@ GameScene::GameScene() {
     _columns->retain();
     
     //被消除的泡泡
-    _tobeRemoved = CCArray::createWithCapacity(PP_BOX_ROWS);    //capacity无所谓，变化的
-    _tobeRemoved->retain();
+    _matched = CCArray::createWithCapacity(PP_BOX_ROWS);    //capacity无所谓，变化的
+    _matched->retain();
     
     _invalid = PaopaoSprite::create(-1, -1, -1);
     _invalid->retain();
+    
+    //消除效果粒子
+//    _eliminate = CCParticleSystemQuad::create("eliminate.plist");
+//    _eliminate->stopSystem();
+//    _eliminate->setVisible(false);
+//    this->addChild(_eliminate, kForeground);
 }
 
 GameScene::~GameScene() {
     CC_SAFE_RELEASE(_columns);
-    CC_SAFE_RELEASE(_tobeRemoved);
+    CC_SAFE_RELEASE(_matched);
     CC_SAFE_RELEASE(_invalid);
 }
 
@@ -86,8 +92,8 @@ void GameScene::resetGame() {
     
     //1. 清空现在的box, 重新填充
     _columns->removeAllObjects();
-    
-    //从左上角开始填充
+
+    //从左下角开始填充
     for (int y=0; y<PP_BOX_COLUMNS; y++) {
         CCArray *row = CCArray::createWithCapacity(PP_BOX_ROWS);
         for (int x=0; x<PP_BOX_ROWS; x++) {
@@ -102,7 +108,7 @@ void GameScene::resetGame() {
     }
     
     //检查是否已经存在3个以上的，并调整
-    this->markAnyMatched();
+    //this->markAnyMatched();
     
     //检查是否可以继续游戏，如果不行，再次reset game
     if (!this->hasCandidate()) {
@@ -110,9 +116,101 @@ void GameScene::resetGame() {
     }
 }
 
+void GameScene::findMatched() {
+    
+    bool h_done = false;    //横向
+    bool v_done = false;    //纵向
+    while (h_done == false || v_done == false) {
+        
+        //while block的逻辑执行两次，分别为横向和纵向
+        Orientation o = OrientationHori;
+        if (h_done==true) { //如果横向已经完成
+            o = OrientationVert;
+        }
+        
+        //循环全部
+        for (int i=0; i<PP_BOX_COLUMNS; i++) {
+            
+            int matchCount = 0; //已经匹配的数量
+            int kind = -1;      //
+            PaopaoSprite *matched1 = NULL;
+            PaopaoSprite *matched2 = NULL;
+            PaopaoSprite *current = NULL;
+            
+            for (int j=0; j<PP_BOX_ROWS; j++) {
+                //如果是水平方向检查
+                if (o == OrientationHori) {
+                    current = this->paopaoByXY(i, j);
+                }else {
+                    current = this->paopaoByXY(j, i);
+                }
+                
+                //判断当前泡泡与上一个是否是一样的
+                if (current->kindValue == kind) {
+                    matchCount++;
+                    if (matchCount > 3) {
+                        _matched->addObject(current);
+                    }else if( matchCount == 3 ) {
+                        _matched->addObject(matched1);
+                        _matched->addObject(matched2);
+                        _matched->addObject(current);
+                        matched1 = NULL;
+                        matched2 = NULL;
+                    }else if( matchCount == 2 ) {
+                        matched2 = current;
+                    }else {
+                        //
+                    }
+                }else {
+                    //如果不一样
+                    matchCount = 1;
+                    matched1 = current;
+                    matched2 = NULL;
+                    kind = current->kindValue;
+                }
+            }   //end for j
+        }   //end for i
+        
+        //方向完成，标记
+        if (o == OrientationHori) {
+            h_done = true;
+        }else {
+            v_done = true;
+        }
+        
+    }
+    
+    
+}
+
 bool GameScene::markAnyMatched() {
-    //TODO
-    return false;
+
+    //横纵检查
+    this->findMatched();
+    
+    if (_matched->count() == 0) {
+        //没有三消，返回false
+        return false;
+    }
+    
+    CCLog("找到%d个匹配", _matched->count() );
+    for (int i=0; i<_matched->count(); i++) {
+        PaopaoSprite *pp = (PaopaoSprite *)_matched->objectAtIndex(i);
+        pp->setIsRemoved(true); //将该泡泡标记为移除状态
+        pp->runAction(
+            CCRepeatForever::create(
+                CCSequence::create(
+                    CCMoveBy::create(0.03f, ccp(5,5)),
+                    CCMoveBy::create(0.03f, ccp(-5,-5)),
+                    NULL)));
+        pp->runAction(CCSequence::create(CCScaleTo::create(0.3, 1.2), CCCallFunc::create(this, callfunc_selector(GameScene::removePaopaoFromScreen)), NULL));
+
+    }
+    return true;
+}
+
+void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
+    _gameBatchNode->removeChild(sender, true);
 }
 
 bool GameScene::hasCandidate() {
@@ -222,6 +320,9 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
         _selected = NULL;
     }else {
         //第一个泡泡被选中
+        if (_selected!=NULL) {
+            _selected->glow(false);
+        }
         CCLog("ppx:%f, ppy:%f", pp->getPosition().x, pp->getPosition().y);
         pp->glow(true);
         _selected = pp;

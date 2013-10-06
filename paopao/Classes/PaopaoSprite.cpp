@@ -15,6 +15,7 @@ PaopaoSprite::PaopaoSprite(int ax, int ay, int akind) {
     kindValue = akind;
     x = ax;
     y = ay;
+    this->setIsRemoved(false);
 }
 
 PaopaoSprite * PaopaoSprite::create(int ax, int ay, int akind) {

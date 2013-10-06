@@ -197,19 +197,94 @@ bool GameScene::markAnyMatched() {
     for (int i=0; i<_matched->count(); i++) {
         PaopaoSprite *pp = (PaopaoSprite *)_matched->objectAtIndex(i);
         pp->setIsRemoved(true); //将该泡泡标记为移除状态
+        //消除动画
         pp->runAction(
             CCRepeatForever::create(
                 CCSequence::create(
                     CCMoveBy::create(0.03f, ccp(5,5)),
                     CCMoveBy::create(0.03f, ccp(-5,-5)),
                     NULL)));
-        pp->runAction(CCSequence::create(CCScaleTo::create(0.3, 1.2), CCCallFunc::create(this, callfunc_selector(GameScene::removePaopaoFromScreen)), NULL));
+        pp->runAction(CCSequence::create(CCScaleTo::create(0.2, 1.2), CCCallFunc::create(this, callfunc_selector(GameScene::removePaopaoFromScreen)), NULL));
 
     }
+    
+    //清空match数组
+    _matched->removeAllObjects();
+    
+    this->print();
+    CCLog("开始下降");
+    
+    //下降泡泡
+    int maxFilledOnColumn = 0;
+    for (int i=0; i<PP_BOX_COLUMNS; i++) {
+        int filled = this->fillColumn(i);
+        if (filled > maxFilledOnColumn) {
+            maxFilledOnColumn = filled;
+        }
+    }
+    
+    this->print();
+    
+    //根据最大的下降泡泡数，做delay
+    this->runAction(CCSequence::create(CCDelayTime::create(PP_MOVE_UNIT_TIME * maxFilledOnColumn + 0.03f), CCCallFunc::create(this, callfunc_selector(GameScene::afterFillDone))));
+    
     return true;
 }
 
+int GameScene::fillColumn(int idx) {
+    
+    int move_unit = 0;
+    //从下往上，逐行循环
+    for (int y=0; y<PP_BOX_ROWS; y++) {
+        
+        PaopaoSprite *p = this->paopaoByXY(idx, y);
+        //这个泡泡是不是被消除了
+        if (p->getIsRemoved()) {    //这是个已经消除的泡泡，不用下移
+            move_unit++;
+        }else if(move_unit==0) {    //之前没有消除的，所以这个泡泡不用下移
+            //
+        }else { //需要下移
+            //向下移动动画
+            p->runAction(CCMoveBy::create(PP_MOVE_UNIT_TIME * move_unit, ccp(0, -PP_SIZE*move_unit)));
+            //在数组和自己的xy都要调整
+            PaopaoSprite *replaced = this->paopaoByXY(idx, y - move_unit);  //这个位置是空的
+            ((CCArray *)_columns->objectAtIndex(replaced->y))->replaceObjectAtIndex(idx, p);
+            ((CCArray *)_columns->objectAtIndex(p->y))->replaceObjectAtIndex(idx, replaced);
+            p->exchangedWith(replaced);
+        }
+    }
+    
+    for (int i=0; i<move_unit; i++) {
+        //创建新泡泡，放到空位置上
+        PaopaoSprite *p = this->paopaoByXY(idx, PP_BOX_ROWS-move_unit+i);
+        int kind = (arc4random()%PP_KIND_COUNT+1);    //随机泡泡
+        PaopaoSprite *np = PaopaoSprite::create(p->x, p->y, kind);
+        np->setPosition(ccp(_boxOffsetX + idx * PP_SIZE + PP_SIZE/2, _boxOffsetY + (PP_BOX_ROWS + i) * PP_SIZE + PP_SIZE/2));
+        _gameBatchNode->addChild(np);
+        ((CCArray *)_columns->objectAtIndex(np->y))->replaceObjectAtIndex(np->x, np);
+        np->runAction(CCMoveBy::create(PP_MOVE_UNIT_TIME*move_unit, ccp(0, -PP_SIZE*move_unit)));
+    }
+    
+    return move_unit;
+}
+
+void GameScene::afterFillDone(cocos2d::CCNode *sender) {
+
+    //还有匹配泡泡？
+    if(this->markAnyMatched()) {
+        return;
+    }
+    
+    //游戏是否可以继续
+    if (this->hasCandidate()) {
+        this->setUserInteractEnabled(true);
+    }else {
+        CCLog("没有可以消除的了，游戏结束");
+    }
+}
+
 void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
+    sender->stopAllActions();
     _gameBatchNode->removeChild(sender, true);
 }
 
@@ -280,6 +355,16 @@ void GameScene::revertExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
     this->setUserInteractEnabled(true);
 }
 
+void GameScene::print() {
+    for (int y=0; y<_columns->count(); y++) {
+        CCArray *row = (CCArray *)_columns->objectAtIndex(y);
+        for (int x=0; x<row->count(); x++) {
+            PaopaoSprite *p = (PaopaoSprite *)row->objectAtIndex(x);
+            p->print(CCString::createWithFormat("@[%d,%d] ===", x, y)->getCString());
+        }
+    }
+}
+
 
 #pragma mark - Cocos2d Events
 void GameScene::update(float dt) {
@@ -323,9 +408,10 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
         if (_selected!=NULL) {
             _selected->glow(false);
         }
-        CCLog("ppx:%f, ppy:%f", pp->getPosition().x, pp->getPosition().y);
-        pp->glow(true);
-        _selected = pp;
+        if (pp->kindValue!=-1) {
+            pp->glow(true);
+            _selected = pp;
+        }
     }
 }
 

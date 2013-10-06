@@ -42,12 +42,16 @@ class GameScene : public cocos2d::CCLayer
     //根据xy得到泡泡
     PaopaoSprite *paopaoByXY(int x, int y);
     void removePaopaoFromScreen(PaopaoSprite *sender);
+    int fillColumn(int idx);
+    void afterFillDone(CCNode *sender);
     //交换
     void exchange(PaopaoSprite *selected1, PaopaoSprite *selected2, SEL_CallFuncND sel);
     void afterExchange(CCNode *sender, PaopaoSprite *paopao);
     void revertExchange(CCNode *sender, PaopaoSprite *paopao);
     
 public:
+    
+    void print();
     GameScene();
     ~GameScene();
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)

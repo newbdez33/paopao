@@ -106,3 +106,7 @@ void PaopaoSprite::exchangedWith(PaopaoSprite *other) {
     //name = CCString::createWithFormat("%d0.png", this->kindValue);
     //this->setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(name->getCString()));
 }
+
+void PaopaoSprite::print(const char *prefix) {
+    CCLog("%s == ptr:%p x:%d, y:%d, kind:%d, isRemoved:%d, isVisiable:%d", prefix, this, this->x, this->y, this->kindValue, this->getIsRemoved()?1:0, this->isVisible()?1:0);
+}

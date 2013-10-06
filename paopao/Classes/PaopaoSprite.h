@@ -40,6 +40,7 @@ public:
     void glow(bool flag);
     
     void exchangedWith(PaopaoSprite *other);
+    void print(const char *prefix);
 };
 
 #endif /* defined(__paopao__PaopaoSprite__) */

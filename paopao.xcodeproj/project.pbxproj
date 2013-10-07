@@ -268,6 +268,7 @@
 		CE1B046A17F6DC0400E617CA /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046917F6DC0400E617CA /* cpVect.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CE1B047817F6DC0400E617CA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B047717F6DC0400E617CA /* AppDelegate.cpp */; };
 		CE1B047B17F6DC0400E617CA /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B047A17F6DC0400E617CA /* GameScene.cpp */; };
+		CEA747D8180229F1002C9123 /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEA747D7180229F1002C9123 /* bg.mp3 */; };
 		CEE19FDE17F9329F0083D768 /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B047117F6DC0400E617CA /* libwebsockets.a */; };
 		CEE19FE317F9342B0083D768 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FE217F9342B0083D768 /* icon120.png */; };
 		CEE19FE617F9345C0083D768 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FE417F9345C0083D768 /* icon57.png */; };
@@ -874,6 +875,7 @@
 		CE1B047717F6DC0400E617CA /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		CE1B047917F6DC0400E617CA /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
 		CE1B047A17F6DC0400E617CA /* GameScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
+		CEA747D7180229F1002C9123 /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
 		CEE19FE217F9342B0083D768 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 		CEE19FE417F9345C0083D768 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
 		CEE19FE517F9345C0083D768 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
@@ -2138,6 +2140,7 @@
 		CEE19FFA17FA71210083D768 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				CEA747D7180229F1002C9123 /* bg.mp3 */,
 				CEE19FFB17FA71210083D768 /* 0.wav */,
 				CEE19FFC17FA71210083D768 /* 1.wav */,
 				CEE19FFD17FA71210083D768 /* 11.wav */,
@@ -2232,6 +2235,7 @@
 				CEE1A01217FA71210083D768 /* 7.wav in Resources */,
 				CEE19FE317F9342B0083D768 /* icon120.png in Resources */,
 				CEE19FE717F9345C0083D768 /* icon114.png in Resources */,
+				CEA747D8180229F1002C9123 /* bg.mp3 in Resources */,
 				CEE1A00917FA71210083D768 /* 0.wav in Resources */,
 				CEE19FE917F935680083D768 /* Default-568h@2x.png in Resources */,
 				CEE19FEB17F9376E0083D768 /* Default.png in Resources */,

@@ -23,7 +23,8 @@ class GameScene : public cocos2d::CCLayer
     PaopaoSprite *_exchanged1;
     
     //效果们
-    CCParticleSystem *_eliminate;
+    CCArray *_eliminatePool;
+    int _eliminateIdx;
     
     
     bool _running;

@@ -40,16 +40,32 @@ GameScene::GameScene() {
     _invalid->retain();
     
     //消除效果粒子
-//    _eliminate = CCParticleSystemQuad::create("eliminate.plist");
-//    _eliminate->stopSystem();
-//    _eliminate->setVisible(false);
-//    this->addChild(_eliminate, kForeground);
+    _eliminatePool = CCArray::createWithCapacity(10);
+    _eliminatePool->retain();
+    for (int i=0; i<10; i++) {
+        CCParticleSystem *e = CCParticleSystemQuad::create("eliminate.plist");
+        e->stopSystem();
+        e->setVisible(false);
+        _eliminatePool->addObject(e);
+        this->addChild(e, kForeground);
+    }
+    _eliminateIdx = 0;
+    
+    //预载入纹理
+    CCTextureCache::sharedTextureCache()->addImage("texture/1.png");
+    CCTextureCache::sharedTextureCache()->addImage("texture/2.png");
+    CCTextureCache::sharedTextureCache()->addImage("texture/3.png");
+    CCTextureCache::sharedTextureCache()->addImage("texture/4.png");
+    CCTextureCache::sharedTextureCache()->addImage("texture/5.png");
+    CCTextureCache::sharedTextureCache()->addImage("texture/6.png");
+    CCTextureCache::sharedTextureCache()->addImage("texture/7.png");
 }
 
 GameScene::~GameScene() {
     CC_SAFE_RELEASE(_columns);
     CC_SAFE_RELEASE(_matched);
     CC_SAFE_RELEASE(_invalid);
+    CC_SAFE_RELEASE(_eliminatePool);
 }
 
 // on "init" you need to initialize your instance
@@ -118,6 +134,8 @@ void GameScene::resetGame() {
     if (!this->hasCandidate()) {
         this->resetGame();
     }
+    
+    SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bg.mp3", true);
 }
 
 void GameScene::findMatched() {
@@ -288,8 +306,23 @@ void GameScene::afterFillDone(cocos2d::CCNode *sender) {
 }
 
 void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
+    
     sender->stopAllActions();
     _gameBatchNode->removeChild(sender, true);
+    
+    if (_eliminateIdx >_eliminatePool->count()-1) {
+        _eliminateIdx = 0;
+    }
+    CCString *name = CCString::createWithFormat("texture/%d.png", sender->kindValue);
+    CCLog("texture:%s", name->getCString());
+    CCTexture2D* texture = CCTextureCache::sharedTextureCache()->textureForKey(name->getCString());
+    CCParticleSystem *e = (CCParticleSystem *)_eliminatePool->objectAtIndex(_eliminateIdx);
+    e->setTexture(texture);
+    e->setPosition(sender->getPosition());
+    e->resetSystem();
+    e->setVisible(true);
+    
+    _eliminateIdx++;
 }
 
 bool GameScene::hasCandidate() {

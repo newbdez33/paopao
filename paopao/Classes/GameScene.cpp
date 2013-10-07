@@ -105,6 +105,7 @@ void GameScene::createGameScreen() {
 void GameScene::resetGame() {
     
     _selected = NULL;
+    _blinkTimer = 0;
     
     //1. 清空现在的box, 重新填充
     _columns->removeAllObjects();
@@ -618,6 +619,19 @@ void GameScene::print() {
 
 #pragma mark - Cocos2d Events
 void GameScene::update(float dt) {
+
+    float r = (arc4random()%400+1)/100.0f + 0.5;
+    if (_blinkTimer>r) {
+        
+        _blinkTimer = 0;
+        
+        int rx  = arc4random()%PP_BOX_ROWS;
+        int ry = arc4random()%PP_BOX_COLUMNS;
+        PaopaoSprite *p = this->paopaoByXY(rx, ry);
+        
+        p->blink();
+    }
+    _blinkTimer+=dt;
     
 }
 

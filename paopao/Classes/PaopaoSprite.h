@@ -18,6 +18,9 @@ private:
     
     CCSprite *_glow;
     CCAction *_glowAction;
+    CCAction *_blinkAction;
+    
+    bool _isBlinking;
     
 public:
     
@@ -38,6 +41,8 @@ public:
     
     //选中动画开关
     void glow(bool flag);
+    void blink();
+    void afterBlink();
     
     void exchangedWith(PaopaoSprite *other);
     void print(const char *prefix);

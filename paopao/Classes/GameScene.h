@@ -26,6 +26,7 @@ class GameScene : public cocos2d::CCLayer
     CCArray *_eliminatePool;
     int _eliminateIdx;
     
+    float _blinkTimer;
     
     bool _running;
     CCSize _screenSize;

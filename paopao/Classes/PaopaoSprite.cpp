@@ -16,6 +16,7 @@ PaopaoSprite::PaopaoSprite(int ax, int ay, int akind) {
     x = ax;
     y = ay;
     this->setIsRemoved(false);
+    _isBlinking = false;
 }
 
 PaopaoSprite * PaopaoSprite::create(int ax, int ay, int akind) {
@@ -54,6 +55,25 @@ void PaopaoSprite::initPaopao() {
     _glowAction = CCRepeatForever::create((CCActionInterval*)sequence);
     _glowAction->retain();
     
+    CCAnimation* animation;
+    animation = CCAnimation::create();
+    CCSpriteFrame * frame;
+    int i;
+    //animation for ground hit
+    for(i = 1; i <= 2; i++) {
+        CCString *name = CCString::createWithFormat("%d%d.png", this->kindValue, i);
+        frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(name->getCString());
+        animation->addSpriteFrame(frame);
+    }
+    animation->setDelayPerUnit(0.05);
+    animation->setRestoreOriginalFrame(true);
+    _blinkAction = CCSequence::create(CCDelayTime::create(0.1), CCAnimate::create(animation), CCCallFunc::create(this, callfunc_selector(PaopaoSprite::afterBlink)), NULL);
+    _blinkAction->retain();
+    
+}
+
+void PaopaoSprite::afterBlink() {
+    _isBlinking = false;
 }
 
 CCPoint PaopaoSprite::positionOnScreen(int offsetX, int offsetY) {
@@ -64,6 +84,7 @@ CCPoint PaopaoSprite::positionOnScreen(int offsetX, int offsetY) {
 
 PaopaoSprite::~PaopaoSprite(void) {
     CC_SAFE_RELEASE(_glowAction);
+    CC_SAFE_RELEASE(_blinkAction);
 }
 
 bool PaopaoSprite::isNextTo(PaopaoSprite *other) {
@@ -107,6 +128,15 @@ void PaopaoSprite::exchangedWith(PaopaoSprite *other) {
     //this->setDisplayFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(name->getCString()));
 }
 
+void PaopaoSprite::blink() {
+
+    if (_blinkAction && _isBlinking==false) {
+        _isBlinking = true;
+        this->runAction(_blinkAction);
+    }
+}
+
 void PaopaoSprite::print(const char *prefix) {
     CCLog("%s == ptr:%p x:%d, y:%d, kind:%d, isRemoved:%d, isVisiable:%d", prefix, this, this->x, this->y, this->kindValue, this->getIsRemoved()?1:0, this->isVisible()?1:0);
 }
+

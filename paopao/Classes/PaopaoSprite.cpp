@@ -7,6 +7,7 @@
 //
 
 #include "PaopaoSprite.h"
+#include "SimpleAudioEngine.h"
 
 using namespace cocos2d;
 
@@ -150,6 +151,7 @@ void PaopaoSprite::blink() {
 void PaopaoSprite::jump() {
     if (_jumpAction) {
         this->runAction(_jumpAction);
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("jump.wav", false);
     }
 }
 

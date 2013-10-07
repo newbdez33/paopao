@@ -59,6 +59,13 @@ GameScene::GameScene() {
     CCTextureCache::sharedTextureCache()->addImage("texture/5.png");
     CCTextureCache::sharedTextureCache()->addImage("texture/6.png");
     CCTextureCache::sharedTextureCache()->addImage("texture/7.png");
+    
+    //预载入音效
+    SimpleAudioEngine::sharedEngine()->preloadEffect("eliminate.wav");
+    SimpleAudioEngine::sharedEngine()->preloadEffect("exchange.wav");
+    SimpleAudioEngine::sharedEngine()->preloadEffect("invalid_move.wav");
+    SimpleAudioEngine::sharedEngine()->preloadEffect("jump.wav");
+    SimpleAudioEngine::sharedEngine()->preloadEffect("select.wav");
 }
 
 GameScene::~GameScene() {
@@ -322,6 +329,8 @@ void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
     e->setPosition(sender->getPosition());
     e->resetSystem();
     e->setVisible(true);
+    
+    SimpleAudioEngine::sharedEngine()->playEffect("eliminate.wav", false);
     
     _eliminateIdx++;
 }
@@ -589,10 +598,12 @@ void GameScene::afterExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
     if (this->markAnyMatched()) {
         CCLog("交换成功");
         this->setUserInteractEnabled(true);
+        SimpleAudioEngine::sharedEngine()->playEffect("exchange.wav", false);
     }else {
         CCLog("非法交换，REVERT");
         //this->setUserInteractEnabled(true); //临时测试
         this->exchange(paopao, _exchanged1, callfuncND_selector(GameScene::revertExchange));
+        SimpleAudioEngine::sharedEngine()->playEffect("invalid_move.wav", false);
     }
     _exchanged1 = NULL;
 }
@@ -676,6 +687,7 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
             pp->glow(true);
             _selected = pp;
         }
+        SimpleAudioEngine::sharedEngine()->playEffect("select.wav", false);
     }
 }
 

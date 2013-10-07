@@ -268,7 +268,17 @@
 		CE1B046A17F6DC0400E617CA /* cpVect.c in Sources */ = {isa = PBXBuildFile; fileRef = CE1B046917F6DC0400E617CA /* cpVect.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		CE1B047817F6DC0400E617CA /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B047717F6DC0400E617CA /* AppDelegate.cpp */; };
 		CE1B047B17F6DC0400E617CA /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1B047A17F6DC0400E617CA /* GameScene.cpp */; };
-		CEA747D8180229F1002C9123 /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEA747D7180229F1002C9123 /* bg.mp3 */; };
+		CEA747E418025BBE002C9123 /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEA747D918025BBE002C9123 /* bg.mp3 */; };
+		CEA747E518025BBE002C9123 /* eliminate.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747DA18025BBE002C9123 /* eliminate.wav */; };
+		CEA747E618025BBE002C9123 /* exchange.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747DB18025BBE002C9123 /* exchange.wav */; };
+		CEA747E718025BBE002C9123 /* great.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747DC18025BBE002C9123 /* great.wav */; };
+		CEA747E818025BBE002C9123 /* invalid_move.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747DD18025BBE002C9123 /* invalid_move.wav */; };
+		CEA747E918025BBE002C9123 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747DE18025BBE002C9123 /* jump.wav */; };
+		CEA747EA18025BBE002C9123 /* over.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747DF18025BBE002C9123 /* over.wav */; };
+		CEA747EB18025BBE002C9123 /* select.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747E018025BBE002C9123 /* select.wav */; };
+		CEA747EC18025BBE002C9123 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747E118025BBE002C9123 /* start.wav */; };
+		CEA747ED18025BBE002C9123 /* wow.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747E218025BBE002C9123 /* wow.wav */; };
+		CEA747EE18025BBE002C9123 /* yes.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEA747E318025BBE002C9123 /* yes.wav */; };
 		CEE19FDE17F9329F0083D768 /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1B047117F6DC0400E617CA /* libwebsockets.a */; };
 		CEE19FE317F9342B0083D768 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FE217F9342B0083D768 /* icon120.png */; };
 		CEE19FE617F9345C0083D768 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FE417F9345C0083D768 /* icon57.png */; };
@@ -277,20 +287,6 @@
 		CEE19FEB17F9376E0083D768 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FEA17F9376E0083D768 /* Default.png */; };
 		CEE19FED17F937A50083D768 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FEC17F937A50083D768 /* Default~iphone.png */; };
 		CEE19FF917FA62830083D768 /* PaopaoSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */; };
-		CEE1A00917FA71210083D768 /* 0.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FFB17FA71210083D768 /* 0.wav */; };
-		CEE1A00A17FA71210083D768 /* 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FFC17FA71210083D768 /* 1.wav */; };
-		CEE1A00B17FA71210083D768 /* 11.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FFD17FA71210083D768 /* 11.wav */; };
-		CEE1A00C17FA71210083D768 /* 13.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FFE17FA71210083D768 /* 13.wav */; };
-		CEE1A00D17FA71210083D768 /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE19FFF17FA71210083D768 /* 2.wav */; };
-		CEE1A00E17FA71210083D768 /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00017FA71210083D768 /* 3.wav */; };
-		CEE1A00F17FA71210083D768 /* 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00117FA71210083D768 /* 4.wav */; };
-		CEE1A01017FA71210083D768 /* 5.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00217FA71210083D768 /* 5.wav */; };
-		CEE1A01117FA71210083D768 /* 6.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00317FA71210083D768 /* 6.wav */; };
-		CEE1A01217FA71210083D768 /* 7.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00417FA71210083D768 /* 7.wav */; };
-		CEE1A01317FA71210083D768 /* over.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00517FA71210083D768 /* over.wav */; };
-		CEE1A01417FA71210083D768 /* start.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00617FA71210083D768 /* start.wav */; };
-		CEE1A01517FA71210083D768 /* wow.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00717FA71210083D768 /* wow.wav */; };
-		CEE1A01617FA71210083D768 /* yes.wav in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A00817FA71210083D768 /* yes.wav */; };
 		CEE1A13017FBF0920083D768 /* iphone in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A12E17FBF0920083D768 /* iphone */; };
 		CEE1A13117FBF0920083D768 /* iphonehd in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A12F17FBF0920083D768 /* iphonehd */; };
 /* End PBXBuildFile section */
@@ -875,7 +871,17 @@
 		CE1B047717F6DC0400E617CA /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		CE1B047917F6DC0400E617CA /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
 		CE1B047A17F6DC0400E617CA /* GameScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
-		CEA747D7180229F1002C9123 /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
+		CEA747D918025BBE002C9123 /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
+		CEA747DA18025BBE002C9123 /* eliminate.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eliminate.wav; sourceTree = "<group>"; };
+		CEA747DB18025BBE002C9123 /* exchange.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = exchange.wav; sourceTree = "<group>"; };
+		CEA747DC18025BBE002C9123 /* great.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = great.wav; sourceTree = "<group>"; };
+		CEA747DD18025BBE002C9123 /* invalid_move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = invalid_move.wav; sourceTree = "<group>"; };
+		CEA747DE18025BBE002C9123 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		CEA747DF18025BBE002C9123 /* over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = over.wav; sourceTree = "<group>"; };
+		CEA747E018025BBE002C9123 /* select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = select.wav; sourceTree = "<group>"; };
+		CEA747E118025BBE002C9123 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.wav; sourceTree = "<group>"; };
+		CEA747E218025BBE002C9123 /* wow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wow.wav; sourceTree = "<group>"; };
+		CEA747E318025BBE002C9123 /* yes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yes.wav; sourceTree = "<group>"; };
 		CEE19FE217F9342B0083D768 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 		CEE19FE417F9345C0083D768 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
 		CEE19FE517F9345C0083D768 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
@@ -884,20 +890,6 @@
 		CEE19FEC17F937A50083D768 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~iphone.png"; path = "Resources/Default~iphone.png"; sourceTree = "<group>"; };
 		CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PaopaoSprite.cpp; path = Classes/PaopaoSprite.cpp; sourceTree = "<group>"; };
 		CEE19FF817FA62830083D768 /* PaopaoSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaopaoSprite.h; path = Classes/PaopaoSprite.h; sourceTree = "<group>"; };
-		CEE19FFB17FA71210083D768 /* 0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 0.wav; sourceTree = "<group>"; };
-		CEE19FFC17FA71210083D768 /* 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1.wav; sourceTree = "<group>"; };
-		CEE19FFD17FA71210083D768 /* 11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 11.wav; sourceTree = "<group>"; };
-		CEE19FFE17FA71210083D768 /* 13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 13.wav; sourceTree = "<group>"; };
-		CEE19FFF17FA71210083D768 /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
-		CEE1A00017FA71210083D768 /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
-		CEE1A00117FA71210083D768 /* 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 4.wav; sourceTree = "<group>"; };
-		CEE1A00217FA71210083D768 /* 5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 5.wav; sourceTree = "<group>"; };
-		CEE1A00317FA71210083D768 /* 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 6.wav; sourceTree = "<group>"; };
-		CEE1A00417FA71210083D768 /* 7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 7.wav; sourceTree = "<group>"; };
-		CEE1A00517FA71210083D768 /* over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = over.wav; sourceTree = "<group>"; };
-		CEE1A00617FA71210083D768 /* start.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start.wav; sourceTree = "<group>"; };
-		CEE1A00717FA71210083D768 /* wow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wow.wav; sourceTree = "<group>"; };
-		CEE1A00817FA71210083D768 /* yes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yes.wav; sourceTree = "<group>"; };
 		CEE1A12E17FBF0920083D768 /* iphone */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iphone; path = Resources/iphone; sourceTree = "<group>"; };
 		CEE1A12F17FBF0920083D768 /* iphonehd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iphonehd; path = Resources/iphonehd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2140,21 +2132,17 @@
 		CEE19FFA17FA71210083D768 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				CEA747D7180229F1002C9123 /* bg.mp3 */,
-				CEE19FFB17FA71210083D768 /* 0.wav */,
-				CEE19FFC17FA71210083D768 /* 1.wav */,
-				CEE19FFD17FA71210083D768 /* 11.wav */,
-				CEE19FFE17FA71210083D768 /* 13.wav */,
-				CEE19FFF17FA71210083D768 /* 2.wav */,
-				CEE1A00017FA71210083D768 /* 3.wav */,
-				CEE1A00117FA71210083D768 /* 4.wav */,
-				CEE1A00217FA71210083D768 /* 5.wav */,
-				CEE1A00317FA71210083D768 /* 6.wav */,
-				CEE1A00417FA71210083D768 /* 7.wav */,
-				CEE1A00517FA71210083D768 /* over.wav */,
-				CEE1A00617FA71210083D768 /* start.wav */,
-				CEE1A00717FA71210083D768 /* wow.wav */,
-				CEE1A00817FA71210083D768 /* yes.wav */,
+				CEA747D918025BBE002C9123 /* bg.mp3 */,
+				CEA747DA18025BBE002C9123 /* eliminate.wav */,
+				CEA747DB18025BBE002C9123 /* exchange.wav */,
+				CEA747DC18025BBE002C9123 /* great.wav */,
+				CEA747DD18025BBE002C9123 /* invalid_move.wav */,
+				CEA747DE18025BBE002C9123 /* jump.wav */,
+				CEA747DF18025BBE002C9123 /* over.wav */,
+				CEA747E018025BBE002C9123 /* select.wav */,
+				CEA747E118025BBE002C9123 /* start.wav */,
+				CEA747E218025BBE002C9123 /* wow.wav */,
+				CEA747E318025BBE002C9123 /* yes.wav */,
 			);
 			name = sounds;
 			path = Resources/sounds;
@@ -2215,29 +2203,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEE1A00E17FA71210083D768 /* 3.wav in Resources */,
-				CEE1A00D17FA71210083D768 /* 2.wav in Resources */,
-				CEE1A00A17FA71210083D768 /* 1.wav in Resources */,
-				CEE1A01517FA71210083D768 /* wow.wav in Resources */,
+				CEA747EE18025BBE002C9123 /* yes.wav in Resources */,
+				CEA747E918025BBE002C9123 /* jump.wav in Resources */,
 				CEE1A13017FBF0920083D768 /* iphone in Resources */,
-				CEE1A01617FA71210083D768 /* yes.wav in Resources */,
-				CEE1A01417FA71210083D768 /* start.wav in Resources */,
 				CE1B019A17F6DBFF00E617CA /* ChangeLog in Resources */,
-				CEE1A00B17FA71210083D768 /* 11.wav in Resources */,
+				CEA747E618025BBE002C9123 /* exchange.wav in Resources */,
+				CEA747E418025BBE002C9123 /* bg.mp3 in Resources */,
+				CEA747EA18025BBE002C9123 /* over.wav in Resources */,
+				CEA747EC18025BBE002C9123 /* start.wav in Resources */,
+				CEA747E718025BBE002C9123 /* great.wav in Resources */,
 				CEE19FED17F937A50083D768 /* Default~iphone.png in Resources */,
-				CEE1A01117FA71210083D768 /* 6.wav in Resources */,
-				CEE1A01017FA71210083D768 /* 5.wav in Resources */,
 				CE1B030E17F6DC0200E617CA /* project.pbxproj in Resources */,
 				CEE19FE617F9345C0083D768 /* icon57.png in Resources */,
-				CEE1A01317FA71210083D768 /* over.wav in Resources */,
-				CEE1A00C17FA71210083D768 /* 13.wav in Resources */,
-				CEE1A00F17FA71210083D768 /* 4.wav in Resources */,
-				CEE1A01217FA71210083D768 /* 7.wav in Resources */,
+				CEA747EB18025BBE002C9123 /* select.wav in Resources */,
+				CEA747ED18025BBE002C9123 /* wow.wav in Resources */,
 				CEE19FE317F9342B0083D768 /* icon120.png in Resources */,
+				CEA747E818025BBE002C9123 /* invalid_move.wav in Resources */,
 				CEE19FE717F9345C0083D768 /* icon114.png in Resources */,
-				CEA747D8180229F1002C9123 /* bg.mp3 in Resources */,
-				CEE1A00917FA71210083D768 /* 0.wav in Resources */,
 				CEE19FE917F935680083D768 /* Default-568h@2x.png in Resources */,
+				CEA747E518025BBE002C9123 /* eliminate.wav in Resources */,
 				CEE19FEB17F9376E0083D768 /* Default.png in Resources */,
 				CEE1A13117FBF0920083D768 /* iphonehd in Resources */,
 			);

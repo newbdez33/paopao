@@ -19,6 +19,7 @@ private:
     CCSprite *_glow;
     CCAction *_glowAction;
     CCAction *_blinkAction;
+    CCAction *_jumpAction;
     
     bool _isBlinking;
     
@@ -43,6 +44,7 @@ public:
     void glow(bool flag);
     void blink();
     void afterBlink();
+    void jump();
     
     void exchangedWith(PaopaoSprite *other);
     void print(const char *prefix);

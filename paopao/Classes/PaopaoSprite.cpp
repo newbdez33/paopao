@@ -70,6 +70,16 @@ void PaopaoSprite::initPaopao() {
     _blinkAction = CCSequence::create(CCDelayTime::create(0.1), CCAnimate::create(animation), CCCallFunc::create(this, callfunc_selector(PaopaoSprite::afterBlink)), NULL);
     _blinkAction->retain();
     
+    animation = CCAnimation::create();
+    for(i = 3; i <= 4; i++) {
+        CCString *name = CCString::createWithFormat("%d%d.png", this->kindValue, i);
+        frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(name->getCString());
+        animation->addSpriteFrame(frame);
+    }
+    animation->setDelayPerUnit(0.05);
+    animation->setRestoreOriginalFrame(true);
+    _jumpAction = CCAnimate::create(animation);
+    _jumpAction->retain();
 }
 
 void PaopaoSprite::afterBlink() {
@@ -78,13 +88,14 @@ void PaopaoSprite::afterBlink() {
 
 CCPoint PaopaoSprite::positionOnScreen(int offsetX, int offsetY) {
     CCPoint pos = ccp(offsetX + x * PP_SIZE + PP_SIZE*0.5f, offsetY + y * PP_SIZE + PP_SIZE*0.5f);
-    CCLog("x:%f, ppx:%f y:%f", pos.x, x*PP_SIZE, pos.y);
+    //CCLog("x:%f, ppx:%f y:%f", pos.x, x*PP_SIZE, pos.y);
     return pos;
 }
 
 PaopaoSprite::~PaopaoSprite(void) {
     CC_SAFE_RELEASE(_glowAction);
     CC_SAFE_RELEASE(_blinkAction);
+    CC_SAFE_RELEASE(_jumpAction);
 }
 
 bool PaopaoSprite::isNextTo(PaopaoSprite *other) {
@@ -133,6 +144,12 @@ void PaopaoSprite::blink() {
     if (_blinkAction && _isBlinking==false) {
         _isBlinking = true;
         this->runAction(_blinkAction);
+    }
+}
+
+void PaopaoSprite::jump() {
+    if (_jumpAction) {
+        this->runAction(_jumpAction);
     }
 }
 

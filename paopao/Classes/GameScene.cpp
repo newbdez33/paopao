@@ -268,7 +268,7 @@ int GameScene::fillColumn(int idx) {
             //
         }else { //需要下移
             //向下移动动画
-            p->runAction(CCSequence::create(CCDelayTime::create(PP_ELIMINATE_TIME), CCMoveBy::create(PP_MOVE_UNIT_TIME * move_unit, ccp(0, -PP_SIZE*move_unit)), NULL));
+            p->runAction(CCSequence::create(CCDelayTime::create(PP_ELIMINATE_TIME), CCMoveBy::create(PP_MOVE_UNIT_TIME * move_unit, ccp(0, -PP_SIZE*move_unit)), CCCallFunc::create(p, callfunc_selector(PaopaoSprite::jump)), NULL));
             //在数组和自己的xy都要调整
             PaopaoSprite *replaced = this->paopaoByXY(idx, y - move_unit);  //这个位置是空的
             ((CCArray *)_columns->objectAtIndex(replaced->y))->replaceObjectAtIndex(idx, p);
@@ -285,7 +285,7 @@ int GameScene::fillColumn(int idx) {
         np->setPosition(ccp(_boxOffsetX + idx * PP_SIZE + PP_SIZE/2, _boxOffsetY + (PP_BOX_ROWS + i) * PP_SIZE + PP_SIZE/2));
         _gameBatchNode->addChild(np);
         ((CCArray *)_columns->objectAtIndex(np->y))->replaceObjectAtIndex(np->x, np);
-        np->runAction(CCSequence::create(CCDelayTime::create(PP_ELIMINATE_TIME), CCMoveBy::create(PP_MOVE_UNIT_TIME*move_unit, ccp(0, -PP_SIZE*move_unit)), NULL));
+        np->runAction(CCSequence::create(CCDelayTime::create(PP_ELIMINATE_TIME), CCMoveBy::create(PP_MOVE_UNIT_TIME*move_unit, ccp(0, -PP_SIZE*move_unit)), CCCallFunc::create(np, callfunc_selector(PaopaoSprite::jump)), NULL));
     }
     
     return move_unit;
@@ -315,7 +315,7 @@ void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
         _eliminateIdx = 0;
     }
     CCString *name = CCString::createWithFormat("texture/%d.png", sender->kindValue);
-    CCLog("texture:%s", name->getCString());
+    //CCLog("texture:%s", name->getCString());
     CCTexture2D* texture = CCTextureCache::sharedTextureCache()->textureForKey(name->getCString());
     CCParticleSystem *e = (CCParticleSystem *)_eliminatePool->objectAtIndex(_eliminateIdx);
     e->setTexture(texture);

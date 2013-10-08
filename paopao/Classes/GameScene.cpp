@@ -274,7 +274,7 @@ bool GameScene::markAnyMatched() {
     this->print();
     
     //根据最大的下降泡泡数，做delay
-    this->runAction(CCSequence::create(CCDelayTime::create(PP_MOVE_UNIT_TIME * maxFilledOnColumn + 0.03f + PP_ELIMINATE_TIME), CCCallFunc::create(this, callfunc_selector(GameScene::afterFillDone))));
+    this->runAction(CCSequence::create(CCDelayTime::create(PP_MOVE_UNIT_TIME * maxFilledOnColumn + 0.03f + PP_ELIMINATE_TIME), CCCallFunc::create(this, callfunc_selector(GameScene::afterFillDone)),NULL));
     
     return true;
 }

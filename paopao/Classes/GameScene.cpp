@@ -107,12 +107,30 @@ void GameScene::createGameScreen() {
     _boxOffsetX = (backgroundBox->getPositionX() - backgroundBox->boundingBox().size.width*0.5) +6;
     _boxOffsetY = (backgroundBox->getPositionY() - backgroundBox->boundingBox().size.height*0.5) +10;
     
+    //score
+    _scoreDisplay = CCLabelBMFont::create("Score:0", "font.fnt", backgroundBox->boundingBox().size.width);
+    _scoreDisplay->setAnchorPoint(ccp(0, 0));
+    _scoreDisplay->setPosition(ccp(_boxOffsetX, backgroundBox->boundingBox().size.height+_boxOffsetY + 5));
+    this->addChild(_scoreDisplay);
+    
+    _highestScore = CCUserDefault::sharedUserDefault()->getIntegerForKey(PP_HIGH_SCORE);
+    _highestScoreDisplay = CCLabelBMFont::create(CCString::createWithFormat("Highest:%d", _highestScore)->getCString(), "font.fnt", backgroundBox->boundingBox().size.width);
+    _highestScoreDisplay->setAnchorPoint(ccp(0, 0));
+    _highestScoreDisplay->setPosition(ccp(_boxOffsetX, backgroundBox->boundingBox().size.height+_boxOffsetY + _scoreDisplay->boundingBox().size.height + 5));
+    this->addChild(_highestScoreDisplay);
+    
+    _messageDisplay = CCLabelBMFont::create("Let's do it.", "font.fnt", backgroundBox->boundingBox().size.width);
+    _messageDisplay->setAnchorPoint(ccp(0, 0));
+    _messageDisplay->setPosition(ccp(_boxOffsetX, backgroundBox->getPositionY() - backgroundBox->boundingBox().size.width*0.5 - _messageDisplay->boundingBox().size.height - 5));
+    this->addChild(_messageDisplay);
+    
 }
 
 void GameScene::resetGame() {
     
     _selected = NULL;
     _blinkTimer = 0;
+    _score = 0;
     
     //1. 清空现在的box, 重新填充
     _columns->removeAllObjects();
@@ -309,7 +327,8 @@ void GameScene::afterFillDone(cocos2d::CCNode *sender) {
     if (this->hasCandidate()) {
         this->setUserInteractEnabled(true);
     }else {
-        CCLog("没有可以消除的了，游戏结束");
+        CCLog("没有可以消除的泡泡了，游戏结束");
+        
     }
 }
 
@@ -333,6 +352,15 @@ void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
     SimpleAudioEngine::sharedEngine()->playEffect("eliminate.wav", false);
     
     _eliminateIdx++;
+    _score++;
+    
+    _scoreDisplay->setString(CCString::createWithFormat("Score:%d", _score)->getCString());
+    if (_score > _highestScore) {
+        _highestScore = _score;
+        _highestScoreDisplay->setString(CCString::createWithFormat("Highest:%d", _score)->getCString());
+        CCUserDefault::sharedUserDefault()->setIntegerForKey(PP_HIGH_SCORE, _highestScore);
+        CCUserDefault::sharedUserDefault()->flush();
+    }
 }
 
 bool GameScene::hasCandidate() {

@@ -31,6 +31,14 @@ class GameScene : public cocos2d::CCLayer
     bool _running;
     CCSize _screenSize;
     
+    int _score;
+    int _highestScore;
+    
+    //画面元素
+    CCLabelBMFont * _scoreDisplay;
+    CCLabelBMFont * _highestScoreDisplay;
+    CCLabelBMFont * _messageDisplay;
+    
     void createGameScreen();
     void resetGame();
     

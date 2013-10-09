@@ -252,14 +252,15 @@ bool GameScene::markAnyMatched() {
                     CCMoveBy::create(0.03f, ccp(5,5)),
                     CCMoveBy::create(0.03f, ccp(-5,-5)),
                     NULL)));
-        pp->runAction(CCSequence::create(CCScaleTo::create(0.2, 1.2), CCCallFunc::create(this, callfunc_selector(GameScene::removePaopaoFromScreen)), NULL));
+        pp->print("stil here?:");
+        pp->runAction(CCSequence::create(CCScaleTo::create(0.2, 1.2), CCCallFuncN::create(this, callfuncN_selector(GameScene::removePaopaoFromScreen)), NULL));
 
     }
     
     //清空match数组
     _matched->removeAllObjects();
     
-    this->print();
+    //this->print();
     CCLog("开始下降");
     
     //下降泡泡
@@ -271,10 +272,10 @@ bool GameScene::markAnyMatched() {
         }
     }
     
-    this->print();
+    //this->print();
     
     //根据最大的下降泡泡数，做delay
-    this->runAction(CCSequence::create(CCDelayTime::create(PP_MOVE_UNIT_TIME * maxFilledOnColumn + 0.03f + PP_ELIMINATE_TIME), CCCallFunc::create(this, callfunc_selector(GameScene::afterFillDone)),NULL));
+    this->runAction(CCSequence::create(CCDelayTime::create(PP_MOVE_UNIT_TIME * maxFilledOnColumn + 0.03f + PP_ELIMINATE_TIME), CCCallFunc::create(this, callfunc_selector(GameScene::afterFillDone)), NULL));
     
     return true;
 }
@@ -334,6 +335,10 @@ void GameScene::afterFillDone(cocos2d::CCNode *sender) {
 
 void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
     
+    sender->print("test:");
+    
+    CCLog("parent:%p", sender->getParent());
+    CCLog("bn:%p", _gameBatchNode);
     sender->stopAllActions();
     _gameBatchNode->removeChild(sender, true);
     
@@ -342,7 +347,13 @@ void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
     }
     CCString *name = CCString::createWithFormat("texture/%d.png", sender->kindValue);
     //CCLog("texture:%s", name->getCString());
+    //texture 在真机总是返回NULL
     CCTexture2D* texture = CCTextureCache::sharedTextureCache()->textureForKey(name->getCString());
+    if (texture==NULL) {
+        CCLog("texture failed:%s", name->getCString());
+        CCTextureCache::sharedTextureCache()->addImage(name->getCString());
+        texture = CCTextureCache::sharedTextureCache()->textureForKey(name->getCString());
+    }
     CCParticleSystem *e = (CCParticleSystem *)_eliminatePool->objectAtIndex(_eliminateIdx);
     e->setTexture(texture);
     e->setPosition(sender->getPosition());

@@ -25,6 +25,7 @@ GameScene::GameScene() {
     _gameBatchNode = CCSpriteBatchNode::create("paopaos.png", 49);
     this->addChild(_gameBatchNode, kMiddleground);
     
+    _isMute = false;
     _running = false;
     _screenSize = CCDirector::sharedDirector()->getWinSize();
     
@@ -100,29 +101,42 @@ bool GameScene::init()
 void GameScene::createGameScreen() {
     
     //背景框
-    CCSprite *backgroundBox = CCSprite::create("box2.png");
-    backgroundBox->setPosition(ccp(_screenSize.width*0.5, _screenSize.height*0.5));
-    this->addChild(backgroundBox);
+    _backgroundBox = CCSprite::create("box2.png");
+    _backgroundBox->setPosition(ccp(_screenSize.width*0.5, _screenSize.height*0.5));
+    this->addChild(_backgroundBox);
     
-    _boxOffsetX = (backgroundBox->getPositionX() - backgroundBox->boundingBox().size.width*0.5) +6;
-    _boxOffsetY = (backgroundBox->getPositionY() - backgroundBox->boundingBox().size.height*0.5) +10;
+    _boxOffsetX = (_backgroundBox->getPositionX() - _backgroundBox->boundingBox().size.width*0.5) +6;
+    _boxOffsetY = (_backgroundBox->getPositionY() - _backgroundBox->boundingBox().size.height*0.5) +10;
     
     //score
-    _scoreDisplay = CCLabelBMFont::create("Score:0", "font.fnt", backgroundBox->boundingBox().size.width);
+    _scoreDisplay = CCLabelBMFont::create("Score:0", "font.fnt", _backgroundBox->boundingBox().size.width);
     _scoreDisplay->setAnchorPoint(ccp(0, 0));
-    _scoreDisplay->setPosition(ccp(_boxOffsetX, backgroundBox->boundingBox().size.height+_boxOffsetY + 5));
+    _scoreDisplay->setPosition(ccp(_boxOffsetX, _backgroundBox->boundingBox().size.height+_boxOffsetY + 5));
     this->addChild(_scoreDisplay);
     
     _highestScore = CCUserDefault::sharedUserDefault()->getIntegerForKey(PP_HIGH_SCORE);
-    _highestScoreDisplay = CCLabelBMFont::create(CCString::createWithFormat("Highest:%d", _highestScore)->getCString(), "font.fnt", backgroundBox->boundingBox().size.width);
+    _highestScoreDisplay = CCLabelBMFont::create(CCString::createWithFormat("Highest:%d", _highestScore)->getCString(), "font.fnt", _backgroundBox->boundingBox().size.width);
     _highestScoreDisplay->setAnchorPoint(ccp(0, 0));
-    _highestScoreDisplay->setPosition(ccp(_boxOffsetX, backgroundBox->boundingBox().size.height+_boxOffsetY + _scoreDisplay->boundingBox().size.height + 5));
+    _highestScoreDisplay->setPosition(ccp(_boxOffsetX, _backgroundBox->boundingBox().size.height+_boxOffsetY + _scoreDisplay->boundingBox().size.height + 5));
     this->addChild(_highestScoreDisplay);
     
-    _messageDisplay = CCLabelBMFont::create("Let's do it.", "font.fnt", backgroundBox->boundingBox().size.width);
+    _messageDisplay = CCLabelBMFont::create("Let's do it.", "font.fnt", _backgroundBox->boundingBox().size.width);
     _messageDisplay->setAnchorPoint(ccp(0, 0));
-    _messageDisplay->setPosition(ccp(_boxOffsetX, backgroundBox->getPositionY() - backgroundBox->boundingBox().size.width*0.5 - _messageDisplay->boundingBox().size.height - 5));
+    _messageDisplay->setPosition(ccp(_boxOffsetX, _backgroundBox->getPositionY() - _backgroundBox->boundingBox().size.width*0.5 - _messageDisplay->boundingBox().size.height - 5));
     this->addChild(_messageDisplay);
+    
+    //底部菜单
+    CCSprite * menuItemOn;
+    //restart game menu
+    //255,210,0
+    menuItemOn = CCSprite::create("restart_btn.png");
+    CCMenuItemSprite *restartGame = CCMenuItemSprite::create(menuItemOn, menuItemOn, this, menu_selector(GameScene::resetGame));
+    menuItemOn = CCSprite::create("mute_btn.png");
+    CCMenuItemSprite *muteGame = CCMenuItemSprite::create(menuItemOn, menuItemOn, this, menu_selector(GameScene::toggleMute));
+    _bottomMenu = CCMenu::create(restartGame, muteGame, NULL);
+    _bottomMenu->alignItemsHorizontally();
+    _bottomMenu->setPosition(_screenSize.width *0.5, _messageDisplay->getPositionY() - _messageDisplay->boundingBox().size.height);
+    this->addChild(_bottomMenu, kForeground);
     
 }
 
@@ -329,16 +343,16 @@ void GameScene::afterFillDone(cocos2d::CCNode *sender) {
         this->setUserInteractEnabled(true);
     }else {
         CCLog("没有可以消除的泡泡了，游戏结束");
-        
+        _messageDisplay->setString(CCString::create("Game over")->getCString());
     }
 }
 
 void GameScene::removePaopaoFromScreen(PaopaoSprite *sender) {
     
-    sender->print("test:");
+    //sender->print("test:");
     
-    CCLog("parent:%p", sender->getParent());
-    CCLog("bn:%p", _gameBatchNode);
+    //CCLog("parent:%p", sender->getParent());
+    //CCLog("bn:%p", _gameBatchNode);
     sender->stopAllActions();
     _gameBatchNode->removeChild(sender, true);
     
@@ -666,6 +680,15 @@ void GameScene::print() {
     }
 }
 
+void GameScene::toggleMute() {
+    _isMute = !_isMute;
+    
+    if (_isMute) {
+        SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+    }else {
+        SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bg.mp3", true);
+    }
+}
 
 #pragma mark - Cocos2d Events
 void GameScene::update(float dt) {
@@ -698,6 +721,11 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
     CCPoint location = touch->getLocationInView();
     location = CCDirector::sharedDirector()->convertToGL( location );
     //CCLog("touched x:%f, y:%f",  location.x, location.y);
+    
+    if (!_backgroundBox->boundingBox().containsPoint(location)) {
+        CCLog("点到外面了");
+        return;
+    }
     
     int x = (location.x - _boxOffsetX) / PP_SIZE;
 	int y = (location.y - _boxOffsetY) / PP_SIZE;

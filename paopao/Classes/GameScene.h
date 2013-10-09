@@ -28,6 +28,7 @@ class GameScene : public cocos2d::CCLayer
     
     float _blinkTimer;
     
+    bool _isMute;
     bool _running;
     CCSize _screenSize;
     
@@ -35,9 +36,11 @@ class GameScene : public cocos2d::CCLayer
     int _highestScore;
     
     //画面元素
+    CCSprite *_backgroundBox;
     CCLabelBMFont * _scoreDisplay;
     CCLabelBMFont * _highestScoreDisplay;
     CCLabelBMFont * _messageDisplay;
+    CCMenu * _bottomMenu;
     
     void createGameScreen();
     void resetGame();
@@ -58,6 +61,8 @@ class GameScene : public cocos2d::CCLayer
     void exchange(PaopaoSprite *selected1, PaopaoSprite *selected2, SEL_CallFuncND sel);
     void afterExchange(CCNode *sender, PaopaoSprite *paopao);
     void revertExchange(CCNode *sender, PaopaoSprite *paopao);
+    
+    void toggleMute();
     
 public:
     

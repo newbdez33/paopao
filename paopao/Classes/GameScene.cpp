@@ -67,6 +67,17 @@ GameScene::GameScene() {
     SimpleAudioEngine::sharedEngine()->preloadEffect("invalid_move.wav");
     SimpleAudioEngine::sharedEngine()->preloadEffect("jump.wav");
     SimpleAudioEngine::sharedEngine()->preloadEffect("select.wav");
+    
+    //cheers
+    _cheerStrings = CCArray::create(
+                                    CCString::create("Wow!"),
+                                    CCString::create("Great!"),
+                                    CCString::create("Pretty good"),
+                                    CCString::create("Smashing!"),
+                                    CCString::create("wonderful!"),
+                                    CCString::create("excellent!"),
+                                    NULL);
+    _cheerStrings->retain();
 }
 
 GameScene::~GameScene() {
@@ -74,6 +85,7 @@ GameScene::~GameScene() {
     CC_SAFE_RELEASE(_matched);
     CC_SAFE_RELEASE(_invalid);
     CC_SAFE_RELEASE(_eliminatePool);
+    CC_SAFE_RELEASE(_cheerStrings);
 }
 
 // on "init" you need to initialize your instance
@@ -175,7 +187,12 @@ void GameScene::resetGame() {
         this->resetGame();
     }
     
-    SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bg.mp3", true);
+    _messageDisplay->setString(CCString::create("Start!")->getCString());
+    
+    if (!_isMute) {
+        SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bg.mp3", true);
+    }
+    
 }
 
 void GameScene::findMatched() {
@@ -255,6 +272,8 @@ bool GameScene::markAnyMatched() {
         return false;
     }
     
+    this->cheerMessage();
+    
     CCLog("找到%d个匹配", _matched->count() );
     for (int i=0; i<_matched->count(); i++) {
         PaopaoSprite *pp = (PaopaoSprite *)_matched->objectAtIndex(i);
@@ -287,6 +306,7 @@ bool GameScene::markAnyMatched() {
     }
     
     //this->print();
+    
     
     //根据最大的下降泡泡数，做delay
     this->runAction(CCSequence::create(CCDelayTime::create(PP_MOVE_UNIT_TIME * maxFilledOnColumn + 0.03f + PP_ELIMINATE_TIME), CCCallFunc::create(this, callfunc_selector(GameScene::afterFillDone)), NULL));
@@ -688,6 +708,12 @@ void GameScene::toggleMute() {
     }else {
         SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bg.mp3", true);
     }
+}
+
+void GameScene::cheerMessage() {
+    int idx = arc4random()%_cheerStrings->count();
+    CCString *cheer = (CCString *)_cheerStrings->objectAtIndex(idx);
+    _messageDisplay->setString(cheer->getCString());
 }
 
 #pragma mark - Cocos2d Events

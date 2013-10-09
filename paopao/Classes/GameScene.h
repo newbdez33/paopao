@@ -41,6 +41,7 @@ class GameScene : public cocos2d::CCLayer
     CCLabelBMFont * _highestScoreDisplay;
     CCLabelBMFont * _messageDisplay;
     CCMenu * _bottomMenu;
+    CCArray * _cheerStrings;
     
     void createGameScreen();
     void resetGame();
@@ -63,6 +64,7 @@ class GameScene : public cocos2d::CCLayer
     void revertExchange(CCNode *sender, PaopaoSprite *paopao);
     
     void toggleMute();
+    void cheerMessage();
     
 public:
     

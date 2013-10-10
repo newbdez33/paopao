@@ -766,6 +766,9 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
     CCLog("getting x:%d, y:%d", x, y);
     PaopaoSprite *pp = this->paopaoByXY(x, y);
     CCLog("got kind:%d, x:%d, y:%d", pp->kindValue, pp->x, pp->y);
+    if (pp->kindValue==-1) {
+        return;
+    }
     if (_selected && _selected->isNextTo(pp)) {
         
         this->setUserInteractEnabled(false);
@@ -774,16 +777,9 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
         _selected = NULL;
     }else {
         //第一个泡泡被选中
-        if (pp->kindValue!=-1) {
-            
-            if (_selected!=NULL) {
-                _selected->glow(false);
-            }
-            
-            pp->glow(true);
-            _selected = pp;
-            
-        }
+        pp->glow(true);
+        _selected = pp;
+
         SimpleAudioEngine::sharedEngine()->playEffect("select.wav", false);
     }
 }

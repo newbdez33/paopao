@@ -191,6 +191,7 @@ void GameScene::resetGame() {
     
     if (!_isMute) {
         SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bg.mp3", true);
+        SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.3);
     }
     
 }
@@ -773,12 +774,15 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
         _selected = NULL;
     }else {
         //第一个泡泡被选中
-        if (_selected!=NULL) {
-            _selected->glow(false);
-        }
         if (pp->kindValue!=-1) {
+            
+            if (_selected!=NULL) {
+                _selected->glow(false);
+            }
+            
             pp->glow(true);
             _selected = pp;
+            
         }
         SimpleAudioEngine::sharedEngine()->playEffect("select.wav", false);
     }

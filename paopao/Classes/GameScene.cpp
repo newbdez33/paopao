@@ -13,6 +13,7 @@ CCScene* GameScene::scene()
     GameScene *layer = GameScene::create();
 
     // add layer as a child to scene
+
     scene->addChild(layer);
 
     // return the scene
@@ -286,7 +287,7 @@ bool GameScene::markAnyMatched() {
                     CCMoveBy::create(0.03f, ccp(5,5)),
                     CCMoveBy::create(0.03f, ccp(-5,-5)),
                     NULL)));
-        pp->print("stil here?:");
+        //pp->print("stil here?:");
         pp->runAction(CCSequence::create(CCScaleTo::create(0.2, 1.2), CCCallFuncN::create(this, callfuncN_selector(GameScene::removePaopaoFromScreen)), NULL));
 
     }
@@ -296,7 +297,7 @@ bool GameScene::markAnyMatched() {
     
     //this->print();
     CCLog("开始下降");
-    
+
     //下降泡泡
     int maxFilledOnColumn = 0;
     for (int i=0; i<PP_BOX_COLUMNS; i++) {
@@ -777,6 +778,10 @@ void GameScene::ccTouchesBegan(CCSet* pTouches, CCEvent* event) {
         _selected = NULL;
     }else {
         //第一个泡泡被选中
+        if (_selected!=NULL) {
+            _selected->glow(false);
+        }
+        
         pp->glow(true);
         _selected = pp;
 

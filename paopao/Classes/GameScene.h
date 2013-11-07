@@ -84,6 +84,9 @@ public:
     
     //////
     void onEnterTransitionDidFinish();
+    
+    ////
+    bool isMuted();
 };
 
 #endif // __GameScene_SCENE_H__

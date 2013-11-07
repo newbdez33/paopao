@@ -197,6 +197,16 @@ void GameScene::resetGame() {
     
 }
 
+bool GameScene::isMuted() {
+    if (_isMute) {
+        CCLOG("_isMute==YES");
+    }else {
+        CCLog("_isMute==NO");
+    }
+    
+    return _isMute;
+}
+
 void GameScene::findMatched() {
     
     bool h_done = false;    //横向
@@ -704,6 +714,8 @@ void GameScene::print() {
 
 void GameScene::toggleMute() {
     _isMute = !_isMute;
+    
+    
     
     if (_isMute) {
         SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();

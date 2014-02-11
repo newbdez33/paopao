@@ -2119,7 +2119,6 @@
 				CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */,
 				EE28CCD018A9DFEB00FA1B31 /* Menu.cpp */,
 				EE28CCD118A9DFEB00FA1B31 /* Menu.h */,
-				EE28CCC918A9DA6C00FA1B31 /* menu */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2152,14 +2151,6 @@
 			);
 			name = sounds;
 			path = Resources/sounds;
-			sourceTree = "<group>";
-		};
-		EE28CCC918A9DA6C00FA1B31 /* menu */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = menu;
-			path = Classes/menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

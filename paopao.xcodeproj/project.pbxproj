@@ -2568,8 +2568,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/cocos2dx/platform/third_party/ios/libraries,
-					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/libwebsockets/ios/lib,
+					./paopao/libs/cocos2dx/platform/third_party/ios/libraries,
+					./paopao/libs/libwebsockets/ios/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -2595,8 +2595,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/cocos2dx/platform/third_party/ios/libraries,
-					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/libwebsockets/ios/lib,
+					./paopao/libs/cocos2dx/platform/third_party/ios/libraries,
+					./paopao/libs/libwebsockets/ios/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",

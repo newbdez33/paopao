@@ -289,7 +289,6 @@
 		CEE19FF917FA62830083D768 /* PaopaoSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */; };
 		CEE1A13017FBF0920083D768 /* iphone in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A12E17FBF0920083D768 /* iphone */; };
 		CEE1A13117FBF0920083D768 /* iphonehd in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A12F17FBF0920083D768 /* iphonehd */; };
-		EE28CCD218A9DFEB00FA1B31 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE28CCD018A9DFEB00FA1B31 /* Menu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -893,8 +892,6 @@
 		CEE19FF817FA62830083D768 /* PaopaoSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaopaoSprite.h; path = Classes/PaopaoSprite.h; sourceTree = "<group>"; };
 		CEE1A12E17FBF0920083D768 /* iphone */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iphone; path = Resources/iphone; sourceTree = "<group>"; };
 		CEE1A12F17FBF0920083D768 /* iphonehd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iphonehd; path = Resources/iphonehd; sourceTree = "<group>"; };
-		EE28CCD018A9DFEB00FA1B31 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Menu.cpp; path = Classes/Menu.cpp; sourceTree = "<group>"; };
-		EE28CCD118A9DFEB00FA1B31 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = Classes/Menu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2117,8 +2114,6 @@
 				CE1B047A17F6DC0400E617CA /* GameScene.cpp */,
 				CEE19FF817FA62830083D768 /* PaopaoSprite.h */,
 				CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */,
-				EE28CCD018A9DFEB00FA1B31 /* Menu.cpp */,
-				EE28CCD118A9DFEB00FA1B31 /* Menu.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2361,7 +2356,6 @@
 				CE1B013817F6DBFF00E617CA /* CCCamera.cpp in Sources */,
 				CE1B03F317F6DC0300E617CA /* Json.cpp in Sources */,
 				CE1B02BC17F6DC0100E617CA /* unzip.cpp in Sources */,
-				EE28CCD218A9DFEB00FA1B31 /* Menu.cpp in Sources */,
 				CE1B038C17F6DC0300E617CA /* CCControlSwitch.cpp in Sources */,
 				CE1B036A17F6DC0300E617CA /* CCComController.cpp in Sources */,
 				CE1B045617F6DC0400E617CA /* cpHashSet.c in Sources */,

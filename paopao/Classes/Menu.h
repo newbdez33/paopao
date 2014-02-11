@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef __paopao__MainMenuScene__
-#define __paopao__MainMenuScene__
+#ifndef __paopao__Menu__
+#define __paopao__Menu__
 
 #include "cocos2d.h"
 
@@ -35,4 +35,4 @@ private:
     bool isEnter;
 };
 
-#endif /* defined(__paopao__MainMenuScene__) */
+#endif /* defined(__paopao__Menu__) */

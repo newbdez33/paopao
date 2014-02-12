@@ -289,6 +289,7 @@
 		CEE19FF917FA62830083D768 /* PaopaoSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */; };
 		CEE1A13017FBF0920083D768 /* iphone in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A12E17FBF0920083D768 /* iphone */; };
 		CEE1A13117FBF0920083D768 /* iphonehd in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A12F17FBF0920083D768 /* iphonehd */; };
+		EE530A6B18AB0A9000942856 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE530A6918AB0A9000942856 /* MainMenu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -892,6 +893,8 @@
 		CEE19FF817FA62830083D768 /* PaopaoSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaopaoSprite.h; path = Classes/PaopaoSprite.h; sourceTree = "<group>"; };
 		CEE1A12E17FBF0920083D768 /* iphone */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iphone; path = Resources/iphone; sourceTree = "<group>"; };
 		CEE1A12F17FBF0920083D768 /* iphonehd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iphonehd; path = Resources/iphonehd; sourceTree = "<group>"; };
+		EE530A6918AB0A9000942856 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
+		EE530A6A18AB0A9000942856 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2114,6 +2117,8 @@
 				CE1B047A17F6DC0400E617CA /* GameScene.cpp */,
 				CEE19FF817FA62830083D768 /* PaopaoSprite.h */,
 				CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */,
+				EE530A6918AB0A9000942856 /* MainMenu.cpp */,
+				EE530A6A18AB0A9000942856 /* MainMenu.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2287,6 +2292,7 @@
 				CE1B026C17F6DC0100E617CA /* CCShaderCache.cpp in Sources */,
 				CE1B011F17F6DBFF00E617CA /* CCActionInterval.cpp in Sources */,
 				CE1B027417F6DC0100E617CA /* CCAnimation.cpp in Sources */,
+				EE530A6B18AB0A9000942856 /* MainMenu.cpp in Sources */,
 				CE1B034517F6DC0200E617CA /* CCMenuItemImageLoader.cpp in Sources */,
 				CE1B03F617F6DC0300E617CA /* RegionAttachment.cpp in Sources */,
 				CE1B014E17F6DBFF00E617CA /* CCAutoreleasePool.cpp in Sources */,

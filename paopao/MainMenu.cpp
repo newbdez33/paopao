@@ -30,21 +30,14 @@ bool MainMenu::init()
         return false;
     }
     
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
+//    CCSize size = CCDirector::sharedDirector()->getWinSize();
     // CCMenuItem
     CCMenuItemImage *imageItemStart=CCMenuItemImage::create("restart_btn.png", "restart_btn.png",this,menu_selector(MainMenu::menu_game_start));
-//    imageItemStart->setPosition(ccp( size.width/2 , size.height/2));
     imageItemStart->setPosition(CCPointZero);
-    
     CCMenuItemImage *imageItemSet=CCMenuItemImage::create("restart_btn.png", "restart_btn.png",this,menu_selector(MainMenu::menu_game_seting));
-    imageItemSet->setPosition(ccp(0, size.height/4));
-    
     CCMenuItemImage *imageItemExit=CCMenuItemImage::create("restart_btn.png", "restart_btn.png",this,menu_selector(MainMenu::menu_game_exit));
-    imageItemExit->setPosition(ccp(0, size.height/8));
-    
-    
-    
     CCMenu *menu = CCMenu::create(imageItemStart,imageItemSet,imageItemExit,NULL);
+    menu->alignItemsVerticallyWithPadding(40.0);
     addChild(menu);
     
     return true;

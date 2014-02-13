@@ -30,7 +30,7 @@ bool MainMenu::init()
     if (!CCLayer::init()) {
         return false;
     }
-    
+
 //    CCSize size = CCDirector::sharedDirector()->getWinSize();
     // CCMenuItem
     CCMenuItemImage *imageItemStart=CCMenuItemImage::create("restart_btn.png", "restart_btn.png",this,menu_selector(MainMenu::menu_game_start));
@@ -40,7 +40,7 @@ bool MainMenu::init()
     CCMenu *menu = CCMenu::create(imageItemStart,imageItemSet,imageItemExit,NULL);
     menu->alignItemsVerticallyWithPadding(40.0);
     this->addChild(menu,2);
-    
+
     return true;
 }
 

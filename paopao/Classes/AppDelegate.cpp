@@ -61,10 +61,9 @@ bool AppDelegate::applicationDidFinishLaunching()
     // create a scene. it's an autorelease object
 //    CCScene *pScene = GameScene::scene();
     CCScene *pScene = MainMenu::scene();
-    CCTransitionShrinkGrow * transitionScene = CCTransitionShrinkGrow::create(0.7, pScene);
-    
+
     // run
-    pDirector->runWithScene(transitionScene);
+    pDirector->runWithScene(pScene);
     
 
     return true;

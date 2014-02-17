@@ -289,6 +289,9 @@
 		CEE19FF917FA62830083D768 /* PaopaoSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */; };
 		CEE1A13017FBF0920083D768 /* iphone in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A12E17FBF0920083D768 /* iphone */; };
 		CEE1A13117FBF0920083D768 /* iphonehd in Resources */ = {isa = PBXBuildFile; fileRef = CEE1A12F17FBF0920083D768 /* iphonehd */; };
+		CEF53B75182BDBEB0014E48B /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF53B74182BDBEB0014E48B /* icon80.png */; };
+		CEF53B78182BDC320014E48B /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF53B76182BDC320014E48B /* 58.png */; };
+		CEF53B79182BDC320014E48B /* icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF53B77182BDC320014E48B /* icon29.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -886,12 +889,15 @@
 		CEE19FE417F9345C0083D768 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
 		CEE19FE517F9345C0083D768 /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
 		CEE19FE817F935680083D768 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
-		CEE19FEA17F9376E0083D768 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		CEE19FEA17F9376E0083D768 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		CEE19FEC17F937A50083D768 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~iphone.png"; path = "Resources/Default~iphone.png"; sourceTree = "<group>"; };
 		CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PaopaoSprite.cpp; path = Classes/PaopaoSprite.cpp; sourceTree = "<group>"; };
 		CEE19FF817FA62830083D768 /* PaopaoSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaopaoSprite.h; path = Classes/PaopaoSprite.h; sourceTree = "<group>"; };
 		CEE1A12E17FBF0920083D768 /* iphone */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iphone; path = Resources/iphone; sourceTree = "<group>"; };
 		CEE1A12F17FBF0920083D768 /* iphonehd */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iphonehd; path = Resources/iphonehd; sourceTree = "<group>"; };
+		CEF53B74182BDBEB0014E48B /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
+		CEF53B76182BDC320014E48B /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
+		CEF53B77182BDC320014E48B /* icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon29.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -967,7 +973,6 @@
 				CEE1A12F17FBF0920083D768 /* iphonehd */,
 				CEE19FFA17FA71210083D768 /* sounds */,
 				CEE19FEC17F937A50083D768 /* Default~iphone.png */,
-				CEE19FEA17F9376E0083D768 /* Default.png */,
 				CEE19FE817F935680083D768 /* Default-568h@2x.png */,
 				CEE19FE117F9342B0083D768 /* icons */,
 				CE1B00FC17F6DBFE00E617CA /* Info.plist */,
@@ -2121,6 +2126,9 @@
 		CEE19FE117F9342B0083D768 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				CEF53B76182BDC320014E48B /* 58.png */,
+				CEF53B77182BDC320014E48B /* icon29.png */,
+				CEF53B74182BDBEB0014E48B /* icon80.png */,
 				CEE19FE417F9345C0083D768 /* icon57.png */,
 				CEE19FE517F9345C0083D768 /* icon114.png */,
 				CEE19FE217F9342B0083D768 /* icon120.png */,
@@ -2143,6 +2151,7 @@
 				CEA747E118025BBE002C9123 /* start.wav */,
 				CEA747E218025BBE002C9123 /* wow.wav */,
 				CEA747E318025BBE002C9123 /* yes.wav */,
+				CEE19FEA17F9376E0083D768 /* Default.png */,
 			);
 			name = sounds;
 			path = Resources/sounds;
@@ -2203,6 +2212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF53B75182BDBEB0014E48B /* icon80.png in Resources */,
 				CEA747EE18025BBE002C9123 /* yes.wav in Resources */,
 				CEA747E918025BBE002C9123 /* jump.wav in Resources */,
 				CEE1A13017FBF0920083D768 /* iphone in Resources */,
@@ -2210,6 +2220,7 @@
 				CEA747E618025BBE002C9123 /* exchange.wav in Resources */,
 				CEA747E418025BBE002C9123 /* bg.mp3 in Resources */,
 				CEA747EA18025BBE002C9123 /* over.wav in Resources */,
+				CEF53B78182BDC320014E48B /* 58.png in Resources */,
 				CEA747EC18025BBE002C9123 /* start.wav in Resources */,
 				CEA747E718025BBE002C9123 /* great.wav in Resources */,
 				CEE19FED17F937A50083D768 /* Default~iphone.png in Resources */,
@@ -2218,6 +2229,7 @@
 				CEA747EB18025BBE002C9123 /* select.wav in Resources */,
 				CEA747ED18025BBE002C9123 /* wow.wav in Resources */,
 				CEE19FE317F9342B0083D768 /* icon120.png in Resources */,
+				CEF53B79182BDC320014E48B /* icon29.png in Resources */,
 				CEA747E818025BBE002C9123 /* invalid_move.wav in Resources */,
 				CEE19FE717F9345C0083D768 /* icon114.png in Resources */,
 				CEE19FE917F935680083D768 /* Default-568h@2x.png in Resources */,
@@ -2494,8 +2506,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: dalian roiland technology Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: dalian roiland technology Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2517,7 +2529,8 @@
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/third_party/ios\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/ios\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "351B8C56-D465-407B-9FF4-3ECC04C1B91C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2527,8 +2540,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: dalian roiland technology Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: dalian roiland technology Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JIE ZHANG (72T2SXUWHC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: JIE ZHANG (72T2SXUWHC)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -2547,8 +2560,9 @@
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/third_party/ios\"",
 					"\"$(PROJECT_NAME)/libs/cocos2dx/platform/ios\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "351B8C56-D465-407B-9FF4-3ECC04C1B91C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2586,7 +2600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: JIE ZHANG (72T2SXUWHC)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = paopao/Prefix.pch;

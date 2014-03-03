@@ -699,7 +699,7 @@ void GameScene::revertExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
         return;
     }
     _exchanged1 = NULL;
-    //this->setUserInteractEnabled(true);
+    this->setUserInteractEnabled(true);
 }
 
 void GameScene::print() {

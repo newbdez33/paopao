@@ -13,7 +13,7 @@
 #define PP_KIND_COUNT       7
 #define PP_SIZE             42.0f
 #define PP_MOVE_UNIT_TIME   0.2f
-#define PP_ELIMINATE_TIME   0.5f
+#define PP_ELIMINATE_TIME   0.4f
 #define PP_HIGH_SCORE   "highscore"
 
 //ENUMS z-order

@@ -292,6 +292,7 @@
 		CEF53B75182BDBEB0014E48B /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF53B74182BDBEB0014E48B /* icon80.png */; };
 		CEF53B78182BDC320014E48B /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF53B76182BDC320014E48B /* 58.png */; };
 		CEF53B79182BDC320014E48B /* icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF53B77182BDC320014E48B /* icon29.png */; };
+		EE530A6B18AB0A9000942856 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE530A6918AB0A9000942856 /* MainMenu.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -898,6 +899,8 @@
 		CEF53B74182BDBEB0014E48B /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
 		CEF53B76182BDC320014E48B /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
 		CEF53B77182BDC320014E48B /* icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon29.png; sourceTree = "<group>"; };
+		EE530A6918AB0A9000942856 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
+		EE530A6A18AB0A9000942856 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2119,6 +2122,8 @@
 				CE1B047A17F6DC0400E617CA /* GameScene.cpp */,
 				CEE19FF817FA62830083D768 /* PaopaoSprite.h */,
 				CEE19FF717FA62830083D768 /* PaopaoSprite.cpp */,
+				EE530A6918AB0A9000942856 /* MainMenu.cpp */,
+				EE530A6A18AB0A9000942856 /* MainMenu.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2299,6 +2304,7 @@
 				CE1B026C17F6DC0100E617CA /* CCShaderCache.cpp in Sources */,
 				CE1B011F17F6DBFF00E617CA /* CCActionInterval.cpp in Sources */,
 				CE1B027417F6DC0100E617CA /* CCAnimation.cpp in Sources */,
+				EE530A6B18AB0A9000942856 /* MainMenu.cpp in Sources */,
 				CE1B034517F6DC0200E617CA /* CCMenuItemImageLoader.cpp in Sources */,
 				CE1B03F617F6DC0300E617CA /* RegionAttachment.cpp in Sources */,
 				CE1B014E17F6DBFF00E617CA /* CCAutoreleasePool.cpp in Sources */,
@@ -2582,8 +2588,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/cocos2dx/platform/third_party/ios/libraries,
-					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/libwebsockets/ios/lib,
+					./paopao/libs/cocos2dx/platform/third_party/ios/libraries,
+					./paopao/libs/libwebsockets/ios/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -2609,8 +2615,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/cocos2dx/platform/third_party/ios/libraries,
-					/Users/z33/Desktop/WorkSpaces/paopao/paopao/libs/libwebsockets/ios/lib,
+					./paopao/libs/cocos2dx/platform/third_party/ios/libraries,
+					./paopao/libs/libwebsockets/ios/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",

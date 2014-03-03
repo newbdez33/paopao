@@ -47,11 +47,11 @@ bool MainMenu::init()
 
 void MainMenu::menu_game_start()
 {
-    CCLog("game start ~~");
+
     CCScene *pScene = GameScene::scene();
-//    CCTransitionFade* transitionScene = CCTransitionFade::create(1.0, pScene,ccWHITE);
+    CCTransitionFade* transitionScene = CCTransitionFade::create(0.5, pScene);
     //瓦片翻转效果
-    CCTransitionZoomFlipX * transitionScene = CCTransitionZoomFlipX::create(0.7, pScene);
+    //CCTransitionZoomFlipX * transitionScene = CCTransitionZoomFlipX::create(0.7, pScene);
     CCDirector::sharedDirector()->replaceScene(transitionScene);
     
     //淡入淡出

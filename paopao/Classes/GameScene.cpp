@@ -682,7 +682,7 @@ void GameScene::afterExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
     
     if (this->markAnyMatched()) {
         CCLog("交换成功");
-        this->setUserInteractEnabled(true);
+        //this->setUserInteractEnabled(true);
         SimpleAudioEngine::sharedEngine()->playEffect("exchange.wav", false);
     }else {
         CCLog("非法交换，REVERT");
@@ -699,7 +699,7 @@ void GameScene::revertExchange(cocos2d::CCNode *sender, PaopaoSprite *paopao) {
         return;
     }
     _exchanged1 = NULL;
-    this->setUserInteractEnabled(true);
+    //this->setUserInteractEnabled(true);
 }
 
 void GameScene::print() {

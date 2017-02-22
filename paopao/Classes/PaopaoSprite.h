@@ -2,7 +2,7 @@
 //  PaopaoSprite.h
 //  paopao
 //
-//  Created by Jack on 1/10/13.
+//  Created by Jack on 1/10/13.haha
 //
 //
 
